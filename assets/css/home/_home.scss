@@ -1,4 +1,5 @@
 header {
+  // margin-top: -4.6875rem;
   background: red;
   height: 100vh;
   width: 100vw;
@@ -6,7 +7,7 @@ header {
   .header-item {
     height: 100%;
     width: 100%;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

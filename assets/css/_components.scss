@@ -1,80 +1,51 @@
-nav.navku {
-  position: absolute;
+nav.my-navbar {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 4.6875rem;
-  // background: maroon;
-  padding: .5rem 4rem;
   // 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // 
-  transition: all .3s ease-in-out;
+  height: 4.6875rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  // background: green;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 
   .brand {
-    // background: #000;
-    height: 100%;
 
     img {
-      // width: 4.375rem;
-      height: 3.5rem;
+      height: 2.5rem;
     }
   }
 
   .nav-links {
-    // position: relative;
-
-    // 
+    background: #000;
+    width: 70%;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    width: 100%;
-    height: 100%;
-    // background: #000;
-    color: #fff;
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    letter-spacing: .125rem;
-    // 
-    transition: all .3s ease-in-out;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.5s ease-in-out;
 
     @media screen and (max-width: 768px) {
-      padding-top: 4rem;
       // display: none;
       position: absolute;
       top: 4.6875rem;
-      right: 100%;
-      flex-direction: column;
+      right: -100%;
+      width: 100%;
       height: calc(100vh - 4.6875rem);
-      background: blue;
-      justify-content: start;
-      gap: 4rem;
-      //
-
+      flex-direction: column;
+      justify-content: center;
+      gap: 8rem;
     }
 
-
-
-    // 
-    .nav-item {
-
-      // background: blue;
-      text-decoration: none;
-      color: #fff;
-      padding: .5rem 1.5rem;
-      transition: all .5s;
-
-
-      &:hover {
-        // background: #fff;
-        color: $primaryColor;
-      }
-    }
-
-    .nav-item.active {
-      color: #000;
+    li {
+      list-style: none;
     }
   }
 
@@ -83,41 +54,16 @@ nav.navku {
   }
 
   .toggle-btn {
+    font-size: 1.5rem;
     display: none;
-    color: #fff;
-    font-size: 2rem;
 
     @media screen and (max-width: 768px) {
       display: block;
-
-    }
-
-    // 
-    a {
-      text-decoration: none;
-      color: #fff;
-      padding: .5rem 1.5rem;
-      transition: all .5s;
-
-      &:hover {
-        // background: #fff;
-        color: $primaryColor;
-      }
     }
   }
 
 }
 
-nav.navku.sticky {
-  position: fixed !important;
-  top: 0;
-  right: 0;
+nav.my-navbar.sticky {
   background: wheat;
-  padding: 1rem 4.5rem;
-
-  .nav-links {
-    @media screen and (max-width: 768px) {
-      background: gold;
-    }
-  }
 }

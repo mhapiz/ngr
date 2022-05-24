@@ -8,9 +8,9 @@ $(window).on('scroll', function () {
   }
 });
 
-const toggleBtn = document.querySelector('#toggle-btn');
-const navLinks = document.querySelector('#nav-links');
+const toggleBtn = document.getElementById('toggle-btn');
+    const navLinks = document.getElementById('nav-links');
 
-toggleBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('show-links');
-});
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show-links');
+    });
