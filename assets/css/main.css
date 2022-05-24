@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  overflow-x: hidden;
+}
+
+nav.navku {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4.6875rem;
+  padding: .5rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+nav.navku .brand {
+  height: 100%;
+}
+
+nav.navku .brand img {
+  height: 3.5rem;
+}
+
+nav.navku .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: .125rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  nav.navku .nav-links {
+    padding-top: 4rem;
+    position: absolute;
+    top: 4.6875rem;
+    right: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: calc(100vh - 4.6875rem);
+    background: blue;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 4rem;
+  }
+}
+
+nav.navku .nav-links .nav-item {
+  text-decoration: none;
+  color: #fff;
+  padding: .5rem 1.5rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+nav.navku .nav-links .nav-item:hover {
+  color: #E41749;
+}
+
+nav.navku .nav-links .nav-item.active {
+  color: #000;
+}
+
+nav.navku .nav-links.show-links {
+  right: 0;
+}
+
+nav.navku .toggle-btn {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav.navku .toggle-btn {
+    display: block;
+  }
+}
+
+nav.navku .toggle-btn a {
+  text-decoration: none;
+  color: #fff;
+  padding: .5rem 1.5rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+nav.navku .toggle-btn a:hover {
+  color: #E41749;
+}
+
+nav.navku.sticky {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  background: wheat;
+  padding: 1rem 4.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav.navku.sticky .nav-links {
+    background: gold;
+  }
+}
+
+header {
+  background: red;
+  height: 100vh;
+  width: 100vw;
+}
+
+header .header-item {
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,123 @@
+nav.navku {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4.6875rem;
+  // background: maroon;
+  padding: .5rem 4rem;
+  // 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // 
+  transition: all .3s ease-in-out;
+
+  .brand {
+    // background: #000;
+    height: 100%;
+
+    img {
+      // width: 4.375rem;
+      height: 3.5rem;
+    }
+  }
+
+  .nav-links {
+    // position: relative;
+
+    // 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    // background: #000;
+    color: #fff;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    // 
+    transition: all .3s ease-in-out;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 4rem;
+      // display: none;
+      position: absolute;
+      top: 4.6875rem;
+      right: 100%;
+      flex-direction: column;
+      height: calc(100vh - 4.6875rem);
+      background: blue;
+      justify-content: start;
+      gap: 4rem;
+      //
+
+    }
+
+
+
+    // 
+    .nav-item {
+
+      // background: blue;
+      text-decoration: none;
+      color: #fff;
+      padding: .5rem 1.5rem;
+      transition: all .5s;
+
+
+      &:hover {
+        // background: #fff;
+        color: $primaryColor;
+      }
+    }
+
+    .nav-item.active {
+      color: #000;
+    }
+  }
+
+  .nav-links.show-links {
+    right: 0;
+  }
+
+  .toggle-btn {
+    display: none;
+    color: #fff;
+    font-size: 2rem;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+
+    }
+
+    // 
+    a {
+      text-decoration: none;
+      color: #fff;
+      padding: .5rem 1.5rem;
+      transition: all .5s;
+
+      &:hover {
+        // background: #fff;
+        color: $primaryColor;
+      }
+    }
+  }
+
+}
+
+nav.navku.sticky {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  background: wheat;
+  padding: 1rem 4.5rem;
+
+  .nav-links {
+    @media screen and (max-width: 768px) {
+      background: gold;
+    }
+  }
+}

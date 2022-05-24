@@ -1,0 +1,18 @@
+header {
+  background: red;
+  height: 100vh;
+  width: 100vw;
+
+  .header-item {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@import 'homeM';
+@import 'homeL';
+@import 'homeXL';
