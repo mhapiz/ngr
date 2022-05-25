@@ -13,6 +13,9 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="stylesheet" href="assets/library/owlcarousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/library/owlcarousel/css/owl.theme.default.min.css">
+
   <link rel="stylesheet" href="assets/css/main.css">
 
   <title>Home </title>
@@ -30,16 +33,19 @@
     </div>
 
     <ul class="nav-links" id="nav-links">
-      <li>
+      <li class="nav-item active">
         <a href="index.html">Home</a>
       </li>
-      <li>
+      <li class="divider"></li>
+      <li class="nav-item">
         <a href="about.html">About</a>
       </li>
-      <li>
-        <a href="services.html">Services</a>
+      <li class="divider"></li>
+      <li class="nav-item">
+        <a href="services.html">Portfolio</a>
       </li>
-      <li>
+      <li class="divider"></li>
+      <li class="nav-item">
         <a href="contact.html">Contact</a>
       </li>
     </ul>
@@ -50,14 +56,24 @@
   </nav>
 
   <header>
-    <div class="header-item" style="background-image: url('assets/img/queens.jpg');">
 
-      <div class="header-content">
-        <div class="header-content-inner">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="content" style="background-image: url('assets/img/avenger.jpg');">
 
+          <h4>1</h4>
         </div>
       </div>
+      <div class="item">
+        <div class="content" style="background-image: url('assets/img/logan.jpg');">
+
+          <h4>2</h4>
+        </div>
+      </div>
+
     </div>
+
+
   </header>
 
   <main style="min-height: 120vh;background:blueviolet;">
@@ -69,8 +85,34 @@
 
   <script src="assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script>
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
+  <script src="assets/library/owlcarousel/js/owl.carousel.min.js"></script>
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      // margin: 10,
+      lazyLoad: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      autoplaySpeed: 1000,
+      nav: false,
+      dots: false,
+      dotsData: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
   </script>
 
   <script src="assets/js/script.js"></script>

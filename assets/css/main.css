@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600&display=swap");
 body {
   padding: 0;
   margin: 0;
@@ -12,6 +12,7 @@ nav.my-navbar {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,12 +24,31 @@ nav.my-navbar {
           align-items: center;
   height: 4.6875rem;
   width: 100%;
-  padding: 1rem 1.5rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 1rem 4rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  nav.my-navbar {
+    padding: 1rem 8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav.my-navbar {
+    padding: 1rem 3rem;
+  }
 }
 
 nav.my-navbar a {
-  color: #ffffff;
+  font-family: "Bebas Neue", cursive;
   text-decoration: none;
+}
+
+nav.my-navbar .brand {
+  height: 2.5rem;
+  width: 30%;
 }
 
 nav.my-navbar .brand img {
@@ -36,8 +56,9 @@ nav.my-navbar .brand img {
 }
 
 nav.my-navbar .nav-links {
-  background: #000;
+  margin-top: 1rem;
   width: 70%;
+  height: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,12 +69,15 @@ nav.my-navbar .nav-links {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
   nav.my-navbar .nav-links {
+    margin-top: 0;
     position: absolute;
     top: 4.6875rem;
     right: -100%;
@@ -66,7 +90,10 @@ nav.my-navbar .nav-links {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 8rem;
+    gap: 4rem;
+  }
+  nav.my-navbar .nav-links li.divider {
+    display: none;
   }
 }
 
@@ -74,12 +101,39 @@ nav.my-navbar .nav-links li {
   list-style: none;
 }
 
+nav.my-navbar .nav-links li.divider {
+  height: 1.2rem;
+  width: 1.2px;
+  background-color: #404244;
+  vertical-align: middle;
+}
+
+nav.my-navbar .nav-links .nav-item {
+  position: relative;
+}
+
+nav.my-navbar .nav-links .nav-item a {
+  text-transform: uppercase;
+  color: #F5F5F5;
+}
+
 nav.my-navbar .nav-links.show-links {
   right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  background-blend-mode: soft-light;
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 1rem;
+}
+
+nav.my-navbar .nav-links.show-links .nav-item a {
+  color: #1B1A17;
 }
 
 nav.my-navbar .toggle-btn {
   font-size: 1.5rem;
+  color: #F5F5F5;
   display: none;
 }
 
@@ -90,16 +144,55 @@ nav.my-navbar .toggle-btn {
 }
 
 nav.my-navbar.sticky {
-  background: wheat;
+  background: #F5F5F5;
+  padding: 1rem 6rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  nav.my-navbar.sticky {
+    padding: 1rem 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav.my-navbar.sticky {
+    padding: 1rem 4rem;
+  }
+}
+
+nav.my-navbar.sticky .nav-links .nav-item a {
+  color: #1B1A17;
+}
+
+nav.my-navbar.sticky .nav-links.show-links {
+  background: #404244;
+  border-radius: 0;
+}
+
+nav.my-navbar.sticky .nav-links.show-links .nav-item a {
+  color: #F5F5F5;
+}
+
+nav.my-navbar.sticky .toggle-btn {
+  color: #1B1A17;
 }
 
 header {
-  background: red;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
-header .header-item {
+header .owl-carousel {
+  height: 100vh;
+  width: 100%;
+}
+
+header .owl-carousel .item {
+  height: 100vh;
+  width: 100%;
+}
+
+header .owl-carousel .item .content {
   height: 100%;
   width: 100%;
   background-position: center;

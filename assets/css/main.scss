@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
 body {
   padding: 0;
@@ -8,8 +8,8 @@ body {
   overflow-x: hidden;
 }
 
-$displayFont : 'Nunito',
-sans-serif;
+$displayFont : 'Bebas Neue',
+cursive;
 
 @import 'colors';
 @import 'components';

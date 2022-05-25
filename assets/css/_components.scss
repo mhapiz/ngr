@@ -2,21 +2,35 @@ nav.my-navbar {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
   // 
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4.6875rem;
   width: 100%;
-  padding: 1rem 1.5rem;
-  // background: green;
+  // 
+  transition: all 0.5s ease-in-out;
+  // 
+  padding: 1rem 4rem;
+
+  @media only screen and (min-width: 1200px) {
+    padding: 1rem 8rem;
+  }
+
+  //
+  @media screen and (max-width: 768px) {
+    padding: 1rem 3rem;
+  }
 
   a {
-    color: $white;
+    font-family: $displayFont;
     text-decoration: none;
   }
 
   .brand {
+    height: 2.5rem;
+    width: 30%;
 
     img {
       height: 2.5rem;
@@ -24,16 +38,20 @@ nav.my-navbar {
   }
 
   .nav-links {
-    background: #000;
+    margin-top: 1rem;
     width: 70%;
+    height: 2.5rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
-    transition: all 0.5s ease-in-out;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    transition: all 0.3s ease-in-out;
 
     @media screen and (max-width: 768px) {
-      // display: none;
+      margin-top: 0;
+
       position: absolute;
       top: 4.6875rem;
       right: -100%;
@@ -41,20 +59,57 @@ nav.my-navbar {
       height: calc(100vh - 4.6875rem);
       flex-direction: column;
       justify-content: center;
-      gap: 8rem;
+      gap: 4rem;
+
+      li.divider {
+        display: none;
+
+      }
+
     }
 
     li {
       list-style: none;
     }
+
+    li.divider {
+      height: 1.2rem;
+      width: 1.2px;
+      background-color: $kayaGray;
+      vertical-align: middle;
+    }
+
+    .nav-item {
+      position: relative;
+
+      a {
+        text-transform: uppercase;
+        color: $kayaWhite;
+      }
+
+    }
   }
 
   .nav-links.show-links {
     right: 0;
+    background: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
+    backdrop-filter: blur(80px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 1rem;
+
+    .nav-item {
+
+      a {
+        color: $kayaBlack;
+      }
+
+    }
   }
 
   .toggle-btn {
     font-size: 1.5rem;
+    color: $kayaWhite;
     display: none;
 
     @media screen and (max-width: 768px) {
@@ -65,5 +120,48 @@ nav.my-navbar {
 }
 
 nav.my-navbar.sticky {
-  background: wheat;
+  background: $kayaWhite;
+
+  padding: 1rem 6rem;
+
+  @media only screen and (min-width: 1200px) {
+    padding: 1rem 10rem;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 4rem;
+
+  }
+
+
+  .nav-links {
+
+    .nav-item {
+      a {
+        color: $kayaBlack;
+      }
+    }
+  }
+
+  .nav-links.show-links {
+    background: $kayaGray;
+    border-radius: 0;
+
+    .nav-item {
+      a {
+        color: $kayaWhite;
+      }
+    }
+  }
+
+  .toggle-btn {
+    color: $kayaBlack;
+  }
 }
+
+// 
+// .owl-carousel .animated {
+//   animation-duration: 3000ms;
+//   animation-fill-mode: both;
+// }
