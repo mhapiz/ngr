@@ -20,7 +20,7 @@ nav.my-navbar {
 
   //
   @media screen and (max-width: 768px) {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
   }
 
   a {
@@ -75,7 +75,7 @@ nav.my-navbar {
     li.divider {
       height: 1.2rem;
       width: 1.2px;
-      background-color: $kayaGray;
+      background-color: $kayaWhite;
       vertical-align: middle;
     }
 
@@ -130,12 +130,16 @@ nav.my-navbar.sticky {
 
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 4rem;
+    padding: 1rem 1.2rem;
 
   }
 
 
   .nav-links {
+
+    li.divider {
+      background-color: $kayaGray;
+    }
 
     .nav-item {
       a {
@@ -160,8 +164,39 @@ nav.my-navbar.sticky {
   }
 }
 
-// 
-// .owl-carousel .animated {
-//   animation-duration: 3000ms;
-//   animation-fill-mode: both;
-// }
+// =====================================================
+.blank-button {
+  color: $kayaWhite;
+  text-decoration: none;
+  // font-size: 1rem;
+  border: 1px solid $kayaWhite;
+  padding: .5rem 1rem;
+
+  // medium screen
+  @media only screen and (min-width: 768px) {
+    font-size: 1.3rem;
+    padding: .5rem 1.5rem;
+  }
+
+  // Extra large screen
+  @media only screen and (min-width: 1200px) {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $kayaBlack;
+    border: 1px solid $primaryColor;
+    background: $primaryColor;
+  }
+}
+
+// =====================================================
+// =====================================================
+// =====================================================
+// =====================================================
+// =====================================================
+// =====================================================
+// =====================================================

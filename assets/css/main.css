@@ -37,7 +37,7 @@ nav.my-navbar {
 
 @media screen and (max-width: 768px) {
   nav.my-navbar {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
   }
 }
 
@@ -104,7 +104,7 @@ nav.my-navbar .nav-links li {
 nav.my-navbar .nav-links li.divider {
   height: 1.2rem;
   width: 1.2px;
-  background-color: #404244;
+  background-color: #F5F5F5;
   vertical-align: middle;
 }
 
@@ -156,8 +156,12 @@ nav.my-navbar.sticky {
 
 @media screen and (max-width: 768px) {
   nav.my-navbar.sticky {
-    padding: 1rem 4rem;
+    padding: 1rem 1.2rem;
   }
+}
+
+nav.my-navbar.sticky .nav-links li.divider {
+  background-color: #404244;
 }
 
 nav.my-navbar.sticky .nav-links .nav-item a {
@@ -175,6 +179,35 @@ nav.my-navbar.sticky .nav-links.show-links .nav-item a {
 
 nav.my-navbar.sticky .toggle-btn {
   color: #1B1A17;
+}
+
+.blank-button {
+  color: #F5F5F5;
+  text-decoration: none;
+  border: 1px solid #F5F5F5;
+  padding: .5rem 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  .blank-button {
+    font-size: 1.3rem;
+    padding: .5rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .blank-button {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+
+.blank-button:hover {
+  color: #1B1A17;
+  border: 1px solid #F2CF40;
+  background: #F2CF40;
 }
 
 header {
@@ -199,5 +232,123 @@ header .owl-carousel .item .content {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+header .owl-carousel .item .content .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .owl-carousel .item .content .content-inner {
+  position: relative;
+  z-index: 3;
+  color: #F5F5F5;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1rem;
+}
+
+header .owl-carousel .item .content .content-inner .title,
+header .owl-carousel .item .content .content-inner .sub-title {
+  font-family: "Bebas Neue", cursive;
+  font-style: normal;
+  font-weight: 400;
+}
+
+header .owl-carousel .item .content .content-inner .title {
+  font-size: 1.6rem;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+}
+
+header .owl-carousel .item .content .content-inner .sub-title {
+  margin-top: .5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+header .owl-carousel .item .content .content-inner .desc {
+  margin-top: .5rem;
+  font-size: .8rem;
+}
+
+header .owl-carousel .item .content .content-inner .btn-wrapper {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  header .owl-carousel .item .content .content-inner {
+    padding: 0 2rem;
+  }
+  header .owl-carousel .item .content .content-inner .title {
+    font-size: 2rem;
+    /* identical to box height */
+    letter-spacing: 0.04em;
+  }
+  header .owl-carousel .item .content .content-inner .sub-title {
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+  }
+  header .owl-carousel .item .content .content-inner .desc {
+    font-size: 1rem;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header .owl-carousel .item .content .content-inner {
+    padding: 0 5rem;
+  }
+  header .owl-carousel .item .content .content-inner .title {
+    font-size: 2.4rem;
+    /* identical to box height */
+    letter-spacing: 0.04em;
+  }
+  header .owl-carousel .item .content .content-inner .sub-title {
+    margin-top: .5rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.08em;
+  }
+  header .owl-carousel .item .content .content-inner .desc {
+    font-size: 1.1rem;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header .owl-carousel .item .content .content-inner {
+    padding: 0 10rem;
+  }
+  header .owl-carousel .item .content .content-inner .title {
+    font-size: 3rem;
+    /* identical to box height */
+    letter-spacing: 0.04em;
+  }
+  header .owl-carousel .item .content .content-inner .sub-title {
+    margin-top: .5rem;
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+  }
+  header .owl-carousel .item .content .content-inner .desc {
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -18,6 +18,59 @@ header {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+
+        .overlay {
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        .content-inner {
+          // background: red;
+          position: relative;
+          z-index: 3;
+          color: $kayaWhite;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 1rem;
+
+
+          .title,
+          .sub-title {
+            font-family: $displayFont;
+            font-style: normal;
+            font-weight: 400;
+          }
+
+          .title {
+            font-size: 1.6rem;
+            /* identical to box height */
+            letter-spacing: 0.04em;
+          }
+
+          .sub-title {
+            margin-top: .5rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+          }
+
+          .desc {
+            margin-top: .5rem;
+            font-size: .8rem;
+          }
+
+          .btn-wrapper {
+            margin-top: 2rem
+          }
+
+        }
       }
     }
   }

@@ -1,0 +1,40 @@
+@media only screen and (min-width: 1200px) {
+
+  header {
+
+    .owl-carousel {
+
+      .item {
+
+        .content {
+
+
+          .content-inner {
+            padding: 0 10rem;
+
+
+            .title {
+              font-size: 3rem;
+              /* identical to box height */
+              letter-spacing: 0.04em;
+            }
+
+            .sub-title {
+              margin-top: .5rem;
+              font-size: 2rem;
+              letter-spacing: 0.08em;
+            }
+
+            .desc {
+              font-size: 1.25rem;
+              letter-spacing: 0.02em;
+              width: 60%;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}
