@@ -36,4 +36,39 @@
     }
   }
 
+  main {
+    section.latest-work {
+      .grid-container {
+        // make grid container full width 4 items
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        // grid-gap: 1rem;
+        .grid-item {
+          width: 100%;
+          height: 50vh;
+
+          .item-desc {
+
+            .title {
+              font-size: 2rem;
+            }
+
+            .sub-title {
+              margin-top: .5rem;
+              font-size: 1.5rem;
+            }
+
+            .btn-wrapper {
+              margin-top: 3rem
+            }
+
+          }
+
+
+        }
+      }
+    }
+  }
+
 }

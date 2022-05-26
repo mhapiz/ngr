@@ -1,11 +1,12 @@
 header {
   height: 100vh;
   width: 100%;
-  // overflow: hidden;
 
   .owl-carousel {
     height: 100vh;
     width: 100%;
+
+
 
     .item {
       height: 100vh;
@@ -14,10 +15,17 @@ header {
       .content {
         height: 100%;
         width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
 
         .overlay {
           height: 100%;
@@ -26,7 +34,7 @@ header {
           position: absolute;
           top: 0;
           left: 0;
-          z-index: 1;
+          z-index: 2;
         }
 
         .content-inner {
@@ -71,6 +79,81 @@ header {
           }
 
         }
+      }
+    }
+  }
+}
+
+
+main {
+  section.latest-work {
+    .grid-container {
+      // make grid container full width 4 items
+      display: grid;
+      // grid-template-columns: repeat(4, 1fr);
+
+      // grid-gap: 1rem;
+      .grid-item {
+        width: 100%;
+        height: 60vh;
+        background: $kayaGray;
+        position: relative;
+        overflow: hidden;
+
+        .bg-item {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: all 0.5s ease-in-out;
+        }
+
+        .item-desc {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: $kayaWhite;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .title {
+            font-family: $displayFont;
+            letter-spacing: 0.06em;
+            font-size: 2rem;
+          }
+
+          .sub-title {
+            margin-top: .5rem;
+            font-size: 1.5rem;
+          }
+
+          .btn-wrapper {
+            margin-top: 2rem
+          }
+
+          // 
+          // display: none;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+
+          .bg-item {
+            transform: scale(1.1);
+          }
+
+          .item-desc {
+            // display: flex;
+            opacity: 1;
+          }
+        }
+
       }
     }
   }

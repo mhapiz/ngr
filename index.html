@@ -24,6 +24,7 @@
 <body>
 
   <nav class="my-navbar">
+    <div class="only-mobile"></div>
     <div class="brand">
       <a href="index.html">
         <img src="assets/img/ngrs-wide-w.png" data-stay="assets/img/ngrs-wide-w.png"
@@ -59,7 +60,8 @@
 
     <div class="owl-carousel owl-theme">
       <div class="item">
-        <div class="content" style="background-image: url('assets/img/avenger.jpg');">
+        <div class="content">
+          <img src="assets/img/avenger.jpg" alt="img1" class="bg-content">
           <div class="overlay"></div>
           <div class="content-inner">
             <h3 class="title">Avengers: Infinity War</h3>
@@ -78,7 +80,8 @@
         </div>
       </div>
       <div class="item">
-        <div class="content" style="background-image: url('assets/img/queens.jpg');">
+        <div class="content">
+          <img src="assets/img/queens.jpg" alt="img2" class="bg-content">
           <div class="overlay"></div>
           <div class="content-inner">
             <h3 class="title">The Queen's Gambit</h3>
@@ -101,8 +104,51 @@
 
   </header>
 
-  <main style="min-height: 120vh;background:blueviolet;">
-
+  <main style="margin-bottom: 100vh;background:blueviolet;">
+    <section class="latest-work">
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="assets/img/logan.jpg" alt="" class="bg-item">
+          <div class="item-desc">
+            <h4 class="title">Logan</h4>
+            <h5 class="sub-title">Marvel Studio</h5>
+            <div class="btn-wrapper">
+              <a href="javascript:void()" class="blank-button"> Watch Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="assets/img/got.jpg" alt="" class="bg-item">
+          <div class="item-desc">
+            <h4 class="title">Game of throne</h4>
+            <h5 class="sub-title">HBO MAX</h5>
+            <div class="btn-wrapper">
+              <a href="javascript:void()" class="blank-button"> Watch Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="assets/img/stranger-things.jpg" alt="" class="bg-item">
+          <div class="item-desc">
+            <h4 class="title">Stranger Things</h4>
+            <h5 class="sub-title">Netflix</h5>
+            <div class="btn-wrapper">
+              <a href="javascript:void()" class="blank-button"> Watch Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="assets/img/twd.jpg" alt="" class="bg-item">
+          <div class="item-desc">
+            <h4 class="title">The Walking dead</h4>
+            <h5 class="sub-title">AMC</h5>
+            <div class="btn-wrapper">
+              <a href="javascript:void()" class="blank-button"> Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
