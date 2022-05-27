@@ -63,16 +63,21 @@ nav.my-navbar .brand {
   width: 30%;
 }
 
+nav.my-navbar .brand .black-logo {
+  display: none;
+}
+
+nav.my-navbar .brand .white-logo {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   nav.my-navbar .brand {
     height: 2rem;
     width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  }
+  nav.my-navbar .brand img {
+    margin: 0 auto;
   }
 }
 
@@ -184,6 +189,14 @@ nav.my-navbar.sticky {
   padding: 1rem 6rem;
 }
 
+nav.my-navbar.sticky .brand .white-logo {
+  display: none;
+}
+
+nav.my-navbar.sticky .brand .black-logo {
+  display: block;
+}
+
 @media only screen and (min-width: 1200px) {
   nav.my-navbar.sticky {
     padding: 1rem 10rem;
@@ -246,6 +259,89 @@ nav.my-navbar.sticky .toggle-btn {
   color: #1B1A17;
   border: 1px solid #F2CF40;
   background: #F2CF40;
+}
+
+.section-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.1rem;
+  color: #1B1A17;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 2px;
+  background: #F2CF40;
+}
+
+.form-group .form-control,
+.form-group .form-select {
+  border-radius: 0;
+}
+
+.form-group .form-select:focus,
+.form-group .form-control:focus {
+  border-color: #F2CF40;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(242, 207, 64, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(242, 207, 64, 0.25);
+}
+
+.form-group label {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1B1A17;
+}
+
+.main-button {
+  color: #1B1A17;
+  text-decoration: none;
+  border: 0;
+  padding: .5rem 1rem;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.06em;
+  background: #F2CF40;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-button {
+    font-size: 1.3rem;
+    padding: .5rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-button {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+
+.main-button:hover {
+  color: #F2CF40;
+  background: #1B1A17;
 }
 
 header {
@@ -412,6 +508,68 @@ main section.latest-work .grid-container .grid-item:hover .item-desc {
   opacity: 1;
 }
 
+main section.contact-us {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+main section.contact-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #F2CF40;
+  z-index: -1;
+}
+
+main section.contact-us .contact-form,
+main section.contact-us .contact-info {
+  border-radius: .5rem;
+  padding: .5rem;
+  height: 100%;
+}
+
+main section.contact-us .contact-form {
+  border: 1px solid #1B1A17;
+  background: rgba(245, 245, 245, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+main section.contact-us .contact-info {
+  background: #404244;
+  color: #F5F5F5;
+}
+
+main section.contact-us .contact-info .title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.015em;
+}
+
+main section.contact-us .contact-info .info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: .5rem;
+}
+
+main section.contact-us .contact-info .info-item .icon {
+  font-size: 1.5rem;
+  width: 10%;
+}
+
+main section.contact-us .contact-info .info-item .content {
+  width: 90%;
+  font-size: .75rem;
+}
+
 @media only screen and (min-width: 768px) {
   header .owl-carousel .item .content .content-inner {
     padding: 0 2rem;
@@ -449,6 +607,38 @@ main section.latest-work .grid-container .grid-item:hover .item-desc {
   }
   main section.latest-work .grid-container .grid-item .item-desc .btn-wrapper {
     margin-top: 3rem;
+  }
+  main section.contact-us {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  main section.contact-us::before {
+    width: 40%;
+  }
+  main section.contact-us .contact-form,
+  main section.contact-us .contact-info {
+    padding: 2rem;
+  }
+  main section.contact-us .contact-info .title {
+    font-size: 2rem;
+    letter-spacing: 0.015em;
+  }
+  main section.contact-us .contact-info .info-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: .5rem;
+  }
+  main section.contact-us .contact-info .info-item .icon {
+    font-size: 2rem;
+    width: 10%;
+  }
+  main section.contact-us .contact-info .info-item .content {
+    width: 90%;
+    font-size: 1.25rem;
   }
 }
 

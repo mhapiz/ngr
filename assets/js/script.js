@@ -1,10 +1,10 @@
 $(window).on('scroll', function () {
   if ($(window).scrollTop()) {
     $('nav').addClass('sticky');
-    $(".brand-logo").attr("src",$('.brand-logo').data("scroll"));
+    // $(".brand-logo").attr("src",$('.brand-logo').data("scroll"));
   } else {
     $('nav').removeClass('sticky');
-    $(".brand-logo").attr("src",$('.brand-logo').data("stay"));
+    // $(".brand-logo").attr("src",$('.brand-logo').data("stay"));
   }
 });
 

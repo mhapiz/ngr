@@ -1,0 +1,23 @@
+$primary: $primaryColor;
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// @import "../library/rawbootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+// @import "../library/rawbootstrap/scss/variables";
+// @import "../library/rawbootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+// @import "../library/rawbootstrap/scss/bootstrap";
+// @import "../library/rawbootstrap/scss/root";
+// @import "../library/rawbootstrap/scss/reboot";
+// @import "../library/rawbootstrap/scss/type";
+// @import "../library/rawbootstrap/scss/images";
+// @import "../library/rawbootstrap/scss/containers";
+// @import "../library/rawbootstrap/scss/grid";
+
+// 5. Add additional custom code here

@@ -6,8 +6,6 @@ header {
     height: 100vh;
     width: 100%;
 
-
-
     .item {
       height: 100vh;
       width: 100%;
@@ -154,6 +152,63 @@ main {
           }
         }
 
+      }
+    }
+  }
+
+  section.contact-us {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background-color: $primaryColor;
+      z-index: -1;
+    }
+
+    .contact-form,
+    .contact-info {
+      border-radius: .5rem;
+      padding: .5rem;
+      height: 100%; // for bigger screens
+    }
+
+    .contact-form {
+      border: 1px solid $kayaBlack;
+      background: rgba($color: $kayaWhite, $alpha: 0.2);
+      backdrop-filter: blur(20px);
+    }
+
+    .contact-info {
+      background: $kayaGray;
+      color: $kayaWhite;
+
+      .title {
+        font-family: $displayFont;
+        font-size: 1.5rem;
+        letter-spacing: 0.015em;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: .5rem;
+
+        .icon {
+          font-size: 1.5rem;
+          width: 10%
+        }
+
+        .content {
+          width: 90%;
+          font-size: .75rem;
+        }
       }
     }
   }
