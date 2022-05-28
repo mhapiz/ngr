@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600&display=swap');
-@import 'colors';
-
-
 
 body {
   padding: 0;
@@ -14,5 +11,6 @@ body {
 $displayFont : 'Bebas Neue',
 cursive;
 
+@import 'colors';
 @import 'components';
 @import 'home/home';

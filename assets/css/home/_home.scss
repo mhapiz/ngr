@@ -166,7 +166,7 @@ main {
       position: absolute;
       top: 0;
       right: 0;
-      width: 40%;
+      width: 20%;
       height: 100%;
       background-color: $primaryColor;
       z-index: -1;
@@ -188,6 +188,10 @@ main {
     .contact-info {
       background: $kayaGray;
       color: $kayaWhite;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
 
       .title {
         font-family: $displayFont;
@@ -198,11 +202,12 @@ main {
       .info-item {
         display: flex;
         align-items: flex-start;
+        width: 100%;
         gap: .5rem;
 
         .icon {
           font-size: 1.5rem;
-          width: 10%
+          width: 10%;
         }
 
         .content {
