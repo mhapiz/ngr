@@ -464,6 +464,20 @@ footer .sosmed-wrapper a {
   margin-top: 10rem;
 }
 
+.hide-navbar {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.show-navbar {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 header.home {
   height: 100vh;
   width: 100%;
@@ -820,7 +834,6 @@ main section.contact-us .contact-info .info-item .content {
 header.head {
   width: 100%;
   height: 40vh;
-  background: chartreuse;
   position: relative;
   background-size: cover;
   background-position: center center;
@@ -967,6 +980,12 @@ section.team .box-wrapper .single-box .team-desc .team-position {
 }
 
 @media only screen and (min-width: 992px) {
+  header.head {
+    height: 50vh;
+  }
+  header.head .page-title h1 {
+    font-size: 2.5rem;
+  }
   section.team {
     width: 100%;
   }

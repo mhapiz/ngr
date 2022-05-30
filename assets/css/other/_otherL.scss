@@ -1,4 +1,13 @@
 @media only screen and (min-width: 992px) {
+  header.head {
+    height: 50vh;
+
+    .page-title {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
 
   section.team {
     width: 100%;
