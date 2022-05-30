@@ -58,21 +58,21 @@
     </a>
   </nav>
 
-  <header>
+  <header class="home">
 
     <div class="owl-carousel owl-theme">
       <div class="item">
         <div class="content">
           <img src="assets/img/avenger.jpg" alt="img1" class="bg-content">
           <div class="overlay"></div>
-          <div class="content-inner">
-            <h3 class="title">Avengers: Infinity War</h3>
-            <h5 class="sub-title">Movie - 2019</h5>
-            <div class="desc">
+          <div class="content-inner ">
+            <h3 class="title animate__animated  animate__fadeIn delay-animation-title">Avengers: Infinity War</h3>
+            <h5 class="sub-title animate__animated  animate__fadeIn delay-animation-sub-title">Movie - 2019</h5>
+            <div class="desc animate__animated  animate__fadeIn delay-animation-desc">
               <p>Set during the Cold War era, orphaned chess prodigy Beth Harmon struggles with addiction in a quest to
                 become the greatest chess player in the world.</p>
             </div>
-            <div class="btn-wrapper">
+            <div class="btn-wrapper animate__animated  animate__fadeIn delay-animation-btn">
               <a href="javascript:void()" class="blank-button">
                 Watch Now
               </a>
@@ -88,6 +88,46 @@
           <div class="content-inner">
             <h3 class="title">The Queen's Gambit</h3>
             <h5 class="sub-title">Series - 2020</h5>
+            <div class="desc">
+              <p>Set during the Cold War era, orphaned chess prodigy Beth Harmon struggles with addiction in a quest to
+                become the greatest chess player in the world.</p>
+            </div>
+            <div class="btn-wrapper">
+              <a href="javascript:void()" class="blank-button">
+                Watch Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <img src="assets/img/logan.jpg" alt="img2" class="bg-content">
+          <div class="overlay"></div>
+          <div class="content-inner">
+            <h3 class="title">Logan</h3>
+            <h5 class="sub-title">Marvel Studio - 2017</h5>
+            <div class="desc">
+              <p>Set during the Cold War era, orphaned chess prodigy Beth Harmon struggles with addiction in a quest to
+                become the greatest chess player in the world.</p>
+            </div>
+            <div class="btn-wrapper">
+              <a href="javascript:void()" class="blank-button">
+                Watch Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <img src="assets/img/twd.jpg" alt="img2" class="bg-content">
+          <div class="overlay"></div>
+          <div class="content-inner">
+            <h3 class="title">The Walking Dead</h3>
+            <h5 class="sub-title">AMC - 2010</h5>
             <div class="desc">
               <p>Set during the Cold War era, orphaned chess prodigy Beth Harmon struggles with addiction in a quest to
                 become the greatest chess player in the world.</p>
@@ -334,13 +374,11 @@
 
   <script>
     var owl = $('.owl-carousel').owlCarousel({
-      // animateOut: 'slideOutDown',
-      // animateIn: 'flipInX',
       loop: true,
       // margin: 10,
       lazyLoad: true,
       autoplay: true,
-      autoplayTimeout: 5000,
+      autoplayTimeout: 10000,
       autoplayHoverPause: true,
       autoplaySpeed: 1000,
       nav: false,
@@ -359,37 +397,20 @@
       }
     });
 
-    owl.on('translate.owl.carousel', function (event) {
-      // var el = event.target;
-      // $('h3', el).addClass('animate__fadeInDown animate__animated animate__delay-2s')
-      //   .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-      //     $('h3', el).removeClass('animate__fadeInDown animate__animated ');
-      //   });
-      // add animate__fadeInDown animate__animated animate__delay-2s
-
-      // $(this).find(".title").hide(200);
-      // $(this).find(".sub-title").hide(200);
-      // $(this).find(".desc").hide(200);
-      // $(this).find(".btn-wrapper").hide(200);
-      // // 
-      $(this).find(".title").fadeOut(200);
-      $(this).find(".sub-title").fadeOut(200);
-      $(this).find(".desc").fadeOut(200);
-      $(this).find(".btn-wrapper").fadeOut(200);
-      // // 
-
-    });
-
-    owl.on('translated.owl.carousel', function (event) {
-      $(this).find(".title").hide(0);
-      $(this).find(".sub-title").hide(0);
-      $(this).find(".desc").hide(0);
-      $(this).find(".btn-wrapper").hide(0);
+    owl.on('translate.owl.carousel', function (e) {
+      var index = e.item.index;
+      $('.title').removeClass('animate__animated animate__fadeIn delay-animation-title');
+      $('.title').eq(index).addClass('animate__animated animate__fadeIn delay-animation-title');
       // 
-      $(this).find(".title").delay(500).fadeIn(800);
-      $(this).find(".sub-title").delay(500).fadeIn(800);
-      $(this).find(".desc").delay(500).fadeIn(800);
-      $(this).find(".btn-wrapper").delay(500).fadeIn(800);
+      $('.sub-title').removeClass('animate__animated animate__fadeIn delay-animation-sub-title');
+      $('.sub-title').eq(index).addClass('animate__animated animate__fadeIn delay-animation-sub-title');
+      // 
+      $('.desc').removeClass('animate__animated animate__fadeIn delay-animation-desc');
+      $('.desc').eq(index).addClass('animate__animated animate__fadeIn delay-animation-desc');
+      // 
+      $('.btn-wrapper').removeClass('animate__animated animate__fadeIn delay-animation-btn');
+      $('.btn-wrapper').eq(index).addClass('animate__animated animate__fadeIn delay-animation-btn');
+      // 
     });
   </script>
 

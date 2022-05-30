@@ -1,0 +1,13 @@
+@media only screen and (min-width: 768px) {
+
+  section.team {
+    width: 100%;
+
+    .box-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
+
+}
