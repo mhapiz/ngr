@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="assets/library/owlcarousel/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/library/owlcarousel/css/owl.theme.default.min.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <link rel="stylesheet" href="assets/css/main.css">
 
   <title>Home </title>
@@ -331,7 +333,9 @@
   <script src="assets/library/owlcarousel/js/owl.carousel.min.js"></script>
 
   <script>
-    $('.owl-carousel').owlCarousel({
+    var owl = $('.owl-carousel').owlCarousel({
+      // animateOut: 'slideOutDown',
+      // animateIn: 'flipInX',
       loop: true,
       // margin: 10,
       lazyLoad: true,
@@ -353,7 +357,40 @@
           items: 1
         }
       }
-    })
+    });
+
+    owl.on('translate.owl.carousel', function (event) {
+      // var el = event.target;
+      // $('h3', el).addClass('animate__fadeInDown animate__animated animate__delay-2s')
+      //   .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+      //     $('h3', el).removeClass('animate__fadeInDown animate__animated ');
+      //   });
+      // add animate__fadeInDown animate__animated animate__delay-2s
+
+      // $(this).find(".title").hide(200);
+      // $(this).find(".sub-title").hide(200);
+      // $(this).find(".desc").hide(200);
+      // $(this).find(".btn-wrapper").hide(200);
+      // // 
+      $(this).find(".title").fadeOut(200);
+      $(this).find(".sub-title").fadeOut(200);
+      $(this).find(".desc").fadeOut(200);
+      $(this).find(".btn-wrapper").fadeOut(200);
+      // // 
+
+    });
+
+    owl.on('translated.owl.carousel', function (event) {
+      $(this).find(".title").hide(0);
+      $(this).find(".sub-title").hide(0);
+      $(this).find(".desc").hide(0);
+      $(this).find(".btn-wrapper").hide(0);
+      // 
+      $(this).find(".title").delay(500).fadeIn(800);
+      $(this).find(".sub-title").delay(500).fadeIn(800);
+      $(this).find(".desc").delay(500).fadeIn(800);
+      $(this).find(".btn-wrapper").delay(500).fadeIn(800);
+    });
   </script>
 
   <script src="assets/js/script.js"></script>
