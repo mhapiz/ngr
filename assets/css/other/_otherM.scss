@@ -1,7 +1,15 @@
 @media only screen and (min-width: 768px) {
+  .img-divider {
+    margin: 8rem 0;
+  }
+
+  section.tentang {
+    margin-top: 8rem;
+  }
 
   section.team {
     width: 100%;
+    margin-bottom: 8rem;
 
     .box-wrapper {
       display: grid;

@@ -1,42 +1,43 @@
 @media only screen and (min-width: 768px) {
 
-  header.home {
+  main {
+    header.home {
 
-    .owl-carousel {
+      .owl-carousel {
 
-      .item {
+        .item {
 
-        .content {
-
-
-          .content-inner {
-            padding: 0 2rem;
+          .content {
 
 
-            .title {
-              font-size: 2rem;
-              /* identical to box height */
-              letter-spacing: 0.04em;
+            .content-inner {
+              padding: 0 2rem;
+
+
+              .title {
+                font-size: 2rem;
+                /* identical to box height */
+                letter-spacing: 0.04em;
+              }
+
+              .sub-title {
+                margin-top: .5rem;
+                font-size: 1.6rem;
+                letter-spacing: 0.08em;
+              }
+
+              .desc {
+                font-size: 1rem;
+                width: 60%;
+              }
+
             }
-
-            .sub-title {
-              margin-top: .5rem;
-              font-size: 1.6rem;
-              letter-spacing: 0.08em;
-            }
-
-            .desc {
-              font-size: 1rem;
-              width: 60%;
-            }
-
           }
         }
       }
     }
-  }
 
-  main {
+
     section.latest-work {
       .grid-container {
         display: grid;

@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -6,6 +10,102 @@ body {
           box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   overflow-x: hidden;
+}
+
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  -webkit-transform: scaleX(1.45);
+          transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  -webkit-transform: scaleY(1.3);
+          transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }
 
 nav.my-navbar {
@@ -102,14 +202,14 @@ nav.my-navbar .nav-links {
   gap: 2rem;
   font-size: 1.25rem;
   letter-spacing: .1rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
   nav.my-navbar .nav-links {
     margin-top: 0;
-    position: absolute;
+    position: fixed;
     top: 4.6875rem;
     right: -100%;
     width: 100%;
@@ -155,6 +255,35 @@ nav.my-navbar .nav-links .nav-item {
 nav.my-navbar .nav-links .nav-item a {
   text-transform: uppercase;
   color: #F5F5F5;
+}
+
+nav.my-navbar .nav-links .nav-item a:hover:not(.active) {
+  color: #F2CF40;
+}
+
+nav.my-navbar .nav-links .nav-item a:hover:not(.active)::after {
+  opacity: 1;
+}
+
+nav.my-navbar .nav-links .nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #F2CF40;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+nav.my-navbar .nav-links .nav-item.active a {
+  color: #F2CF40;
+}
+
+nav.my-navbar .nav-links .nav-item.active a::after {
+  opacity: 1;
 }
 
 nav.my-navbar .nav-links.show-links {
@@ -478,27 +607,27 @@ footer .sosmed-wrapper a {
   transition: all 0.3s ease-in-out;
 }
 
-header.home {
+main header.home {
+  height: 100vh;
+  width: 100vw;
+}
+
+main header.home .owl-carousel {
   height: 100vh;
   width: 100%;
 }
 
-header.home .owl-carousel {
+main header.home .owl-carousel .item {
   height: 100vh;
   width: 100%;
 }
 
-header.home .owl-carousel .item {
-  height: 100vh;
-  width: 100%;
-}
-
-header.home .owl-carousel .item .content {
+main header.home .owl-carousel .item .content {
   height: 100%;
   width: 100%;
 }
 
-header.home .owl-carousel .item .content img {
+main header.home .owl-carousel .item .content img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -511,7 +640,7 @@ header.home .owl-carousel .item .content img {
   z-index: 1;
 }
 
-header.home .owl-carousel .item .content .overlay {
+main header.home .owl-carousel .item .content .overlay {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -521,7 +650,7 @@ header.home .owl-carousel .item .content .overlay {
   z-index: 2;
 }
 
-header.home .owl-carousel .item .content .content-inner {
+main header.home .owl-carousel .item .content .content-inner {
   position: relative;
   z-index: 3;
   color: #F5F5F5;
@@ -540,31 +669,31 @@ header.home .owl-carousel .item .content .content-inner {
   padding: 0 1rem;
 }
 
-header.home .owl-carousel .item .content .content-inner .title,
-header.home .owl-carousel .item .content .content-inner .sub-title {
+main header.home .owl-carousel .item .content .content-inner .title,
+main header.home .owl-carousel .item .content .content-inner .sub-title {
   font-family: "Bebas Neue", cursive;
   font-style: normal;
   font-weight: 400;
 }
 
-header.home .owl-carousel .item .content .content-inner .title {
+main header.home .owl-carousel .item .content .content-inner .title {
   font-size: 1.6rem;
   /* identical to box height */
   letter-spacing: 0.04em;
 }
 
-header.home .owl-carousel .item .content .content-inner .sub-title {
+main header.home .owl-carousel .item .content .content-inner .sub-title {
   margin-top: .5rem;
   font-size: 1.2rem;
   letter-spacing: 0.08em;
 }
 
-header.home .owl-carousel .item .content .content-inner .desc {
+main header.home .owl-carousel .item .content .content-inner .desc {
   margin-top: .5rem;
   font-size: .8rem;
 }
 
-header.home .owl-carousel .item .content .content-inner .btn-wrapper {
+main header.home .owl-carousel .item .content .content-inner .btn-wrapper {
   margin-top: 2rem;
 }
 
@@ -719,20 +848,20 @@ main section.contact-us .contact-info .info-item .content {
 }
 
 @media only screen and (min-width: 768px) {
-  header.home .owl-carousel .item .content .content-inner {
+  main header.home .owl-carousel .item .content .content-inner {
     padding: 0 2rem;
   }
-  header.home .owl-carousel .item .content .content-inner .title {
+  main header.home .owl-carousel .item .content .content-inner .title {
     font-size: 2rem;
     /* identical to box height */
     letter-spacing: 0.04em;
   }
-  header.home .owl-carousel .item .content .content-inner .sub-title {
+  main header.home .owl-carousel .item .content .content-inner .sub-title {
     margin-top: .5rem;
     font-size: 1.6rem;
     letter-spacing: 0.08em;
   }
-  header.home .owl-carousel .item .content .content-inner .desc {
+  main header.home .owl-carousel .item .content .content-inner .desc {
     font-size: 1rem;
     width: 60%;
   }
@@ -886,7 +1015,12 @@ header.head .page-title h1::before {
   z-index: -1;
 }
 
+section.tentang {
+  margin-top: 5rem;
+}
+
 section.team {
+  margin-bottom: 5rem;
   width: 100%;
 }
 
@@ -901,6 +1035,7 @@ section.team .box-wrapper .single-box {
   height: 400px;
   padding: 2rem;
   position: relative;
+  overflow: hidden;
 }
 
 section.team .box-wrapper .single-box .section-title {
@@ -928,6 +1063,8 @@ section.team .box-wrapper .single-box img.team-img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 section.team .box-wrapper .single-box .team-desc {
@@ -951,6 +1088,9 @@ section.team .box-wrapper .single-box .team-desc {
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.04em;
   background: rgba(27, 26, 23, 0.6);
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 section.team .box-wrapper .single-box .team-desc .team-name {
@@ -967,9 +1107,25 @@ section.team .box-wrapper .single-box .team-desc .team-position {
   font-size: 1.25rem;
 }
 
+section.team .box-wrapper .single-box:hover img.team-img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+section.team .box-wrapper .single-box:hover .team-desc {
+  opacity: 1;
+}
+
 @media only screen and (min-width: 768px) {
+  .img-divider {
+    margin: 8rem 0;
+  }
+  section.tentang {
+    margin-top: 8rem;
+  }
   section.team {
     width: 100%;
+    margin-bottom: 8rem;
   }
   section.team .box-wrapper {
     display: -ms-grid;
