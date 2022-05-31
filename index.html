@@ -59,9 +59,6 @@
 
   <main data-scroll-container>
 
-
-
-
     <header class="home" data-scroll-section>
 
       <div class="owl-carousel owl-theme">
@@ -151,7 +148,6 @@
 
       </div>
 
-
     </header>
 
     <section class="latest-work" data-scroll-section>
@@ -198,6 +194,7 @@
         </div>
       </div>
     </section>
+
     <section class="contact-us" data-scroll-section>
       <div class="container">
         <h3 class="section-title" data-scroll data-scroll-speed="2">CONTACT US</h3>
@@ -424,37 +421,6 @@
   </script>
 
   <script src="assets/js/locomotive-scroll.min.js"></script>
-  <script>
-    (function () {
-      let scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-      });
-      // Navigation Menu 
-      const navBar = document.querySelector("nav");
-      let last_scroll_top = 0;
-
-      scroll.on("scroll", (position) => {
-        let scroll_top = position.scroll.y;
-        if (scroll_top > last_scroll_top) {
-          $('nav').addClass('hide-navbar');
-          $('nav').removeClass('show-navbar');
-          $('.nav-links').removeClass('show-links');
-        } else {
-          $('nav').addClass('show-navbar');
-          $('nav').removeClass('hide-navbar');
-          $('.nav-links').removeClass('show-links');
-        }
-        last_scroll_top = scroll_top;
-
-        if (scroll_top > 75) {
-          $('nav').addClass('sticky');
-        } else {
-          $('nav').removeClass('sticky');
-        }
-      }, true);
-    })();
-  </script>
 
   <script src="assets/js/script.js"></script>
 

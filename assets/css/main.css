@@ -940,20 +940,20 @@ main section.contact-us .contact-info .info-item .content {
 }
 
 @media only screen and (min-width: 1200px) {
-  header.home .owl-carousel .item .content .content-inner {
+  main header.home .owl-carousel .item .content .content-inner {
     padding: 0 10rem;
   }
-  header.home .owl-carousel .item .content .content-inner .title {
+  main header.home .owl-carousel .item .content .content-inner .title {
     font-size: 3rem;
     /* identical to box height */
     letter-spacing: 0.04em;
   }
-  header.home .owl-carousel .item .content .content-inner .sub-title {
+  main header.home .owl-carousel .item .content .content-inner .sub-title {
     margin-top: .5rem;
     font-size: 2rem;
     letter-spacing: 0.08em;
   }
-  header.home .owl-carousel .item .content .content-inner .desc {
+  main header.home .owl-carousel .item .content .content-inner .desc {
     font-size: 1.25rem;
     letter-spacing: 0.02em;
     width: 60%;
@@ -1168,6 +1168,16 @@ section.team .box-wrapper .single-box:hover .team-desc {
   }
   section.team .box-wrapper .single-box {
     height: 320px;
+  }
+  section.latest-work.services .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  section.latest-work.services .grid-container .grid-item {
+    width: 100%;
+    height: 40vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
