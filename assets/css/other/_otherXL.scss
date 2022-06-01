@@ -24,4 +24,70 @@
       }
     }
   }
+
+  // deetail
+
+  section.project-detail {
+    .subtitle {
+      font-size: 1.5rem;
+
+    }
+
+    .project-info {
+
+      .title {
+        font-size: 4rem;
+      }
+
+      .tag {
+
+        h6 {
+          font-size: 1.25rem;
+          position: relative;
+        }
+
+      }
+    }
+
+    .project-description {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+
+      h6 {
+        font-size: 1.5rem;
+      }
+
+    }
+
+    .project-sponsor {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+
+    }
+
+    .project-trailer {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+
+      .trailer-wrapper {
+        height: 60vh;
+      }
+    }
+
+    .project-role {
+
+      .role-item {
+        h6 {
+          font-size: 1.5rem;
+          font-family: $displayFont;
+          letter-spacing: 0.08em;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
 }

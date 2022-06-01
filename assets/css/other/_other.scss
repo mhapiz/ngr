@@ -149,6 +149,139 @@ section.team {
   }
 }
 
+section.latest-work.services {
+  padding-top: 5rem;
+
+  .section-title {
+    margin-bottom: 5rem;
+  }
+}
+
+// detail
+header.hero-detail {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+}
+
+section.project-detail {
+  background-color: $white;
+  padding-top: 4rem;
+
+  .subtitle {
+    font-family: $displayFont;
+    letter-spacing: 0.08em;
+
+  }
+
+  .project-info {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $kayaBlack;
+
+    .title {
+      font-size: 2rem;
+      font-family: $displayFont;
+      letter-spacing: 0.08em;
+    }
+
+    .tag {
+      font-family: $displayFont;
+      display: flex;
+      gap: .5rem;
+
+      h6 {
+        font-size: .9rem;
+        position: relative;
+      }
+
+      .divider {
+        height: 1rem;
+        width: 1px;
+        background-color: $kayaBlack;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .project-description {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $kayaBlack;
+
+    h6 {
+      font-size: 1.25rem;
+      font-family: $displayFont;
+      letter-spacing: 0.08em;
+    }
+
+  }
+
+  .project-sponsor {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $kayaBlack;
+
+
+    .sponsor-wrapper {
+      margin-top: 2rem;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(2rem, 8rem));
+      gap: 1rem;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .project-trailer {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+
+    .trailer-wrapper {
+      margin-top: 2rem;
+
+      width: 100%;
+      height: 25vh;
+      object-fit: cover;
+      background: #000;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .project-role {
+    border-top: 1px solid $kayaBlack;
+    padding-top: 4rem;
+
+    .role-item {
+      h6 {
+        font-size: 1.25rem;
+        font-family: $displayFont;
+        letter-spacing: 0.08em;
+      }
+
+      p {
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
 
 @import 'otherM';
 @import 'otherL';
