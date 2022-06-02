@@ -12,12 +12,18 @@ function removeLoader() {
 (function () {
   let scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
+    inertia: 0.8,
     smooth: true,
+    getDirection: true,
     smartphone: {
-      smooth: true
+      inertia: 0.8,
+      smooth: true,
+      getDirection: true,
     },
     tablet: {
-        smooth: true
+      inertia: 0.8,
+      smooth: true,
+      getDirection: true,
     }
   });
   // Navigation Menu  
