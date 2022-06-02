@@ -15,16 +15,7 @@ function removeLoader() {
     inertia: 0.8,
     smooth: true,
     getDirection: true,
-    smartphone: {
-      inertia: 0.8,
-      smooth: true,
-      getDirection: true,
-    },
-    tablet: {
-      inertia: 0.8,
-      smooth: true,
-      getDirection: true,
-    }
+    
   });
   // Navigation Menu  
   let last_scroll_top = 0;
