@@ -282,6 +282,30 @@ section.project-detail {
   }
 }
 
+// contact 
+section.location {
+  width: 100vw;
+  height: 40vh;
+  overflow: hidden;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+
+  }
+}
+
+section.faq {
+  margin: 8rem 0;
+
+  .accordion-wrapper {
+    .accordion-title {
+      font-size: 1.5rem;
+      font-family: $displayFont;
+    }
+  }
+}
+
 
 @import 'otherM';
 @import 'otherL';

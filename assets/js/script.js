@@ -39,6 +39,7 @@ function removeLoader() {
       $('nav').removeClass('sticky');
     }
   }, true);
+ 
 })();
 
 const toggleBtn = document.getElementById('toggle-btn');
