@@ -1,0 +1,180 @@
+@import 'assets';
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 0 calc(100vw * 0.24);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    padding: 0 calc(100vw * 0.32);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    padding: 0 calc(100vw * 0.36);
+  }
+}
+
+main.invitation {
+  section {
+    overflow: hidden;
+  }
+
+  section.cover {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem;
+
+
+    .content-wrapper {
+      height: 100%;
+      padding: 1rem .5rem;
+      // background: rgba($color: green, $alpha: .4);
+      border: 4px solid $kayaWhite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .logo-wrapper {
+        width: 60%;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .title {
+        margin-top: 2rem;
+        text-align: center;
+        // background: $primaryColor;
+        font-family: $displayFont;
+        color: $kayaWhite;
+
+        h1 {
+          font-size: 3rem;
+          letter-spacing: .08rem;
+        }
+      }
+    }
+  }
+
+  section.kata-kata {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .graphic {
+      position: absolute;
+    }
+
+    .graphic1 {
+      top: 8%;
+      height: 20rem;
+    }
+
+    .graphic2 {
+      top: 25rem;
+      right: -10%;
+      width: 20rem;
+    }
+
+    .graphic3 {
+      bottom: 0;
+      right: 0;
+      width: 12rem;
+    }
+
+    .content-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2rem;
+
+
+      .box-content {
+        margin-top: 4rem;
+        border-radius: 16px;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.4);
+        background-blend-mode: soft-light;
+        backdrop-filter: blur(2rem);
+        /* Note: backdrop-filter has minimal browser support */
+
+
+        .content-title {
+          font-family: $displayFont;
+        }
+
+        .content-desc {
+          line-height: 120%;
+        }
+      }
+    }
+  }
+
+  section.lokasi {
+    width: 100%;
+    height: 100vh;
+
+    .maps {
+      width: 100%;
+      height: 50vh;
+      background: $kayaBlack;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .alamat-wrapper {
+      width: 100%;
+      height: 50vh;
+      padding: 1rem .8rem;
+      background-color: $kayaGray;
+
+      color: $kayaWhite;
+
+      h2.title {
+        font-family: $displayFont;
+        letter-spacing: .08rem;
+
+      }
+
+      .info-list {
+        .info-item {
+          margin-bottom: 1rem;
+
+          .info-title {
+            h3 {
+              font-size: 1.25rem;
+              font-weight: 600;
+            }
+          }
+
+          .info-desc {
+            margin-top: .5rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+  }
+
+}
