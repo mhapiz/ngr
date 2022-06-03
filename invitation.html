@@ -55,7 +55,7 @@
       <img src="assets/supergraphic/superghraphic_5.png" alt="graphic2" class="graphic graphic2">
       <img src="assets/supergraphic/superghraphic_2.png" alt="graphic3" class="graphic graphic3">
       <div class="content-wrapper container">
-        <div class="box-content " data-scroll data-scroll-speed="-2">
+        <div class="box-content " data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
           <div class="content-title">
             <h2>
               Kata Pengantar
@@ -69,7 +69,7 @@
               ipsum quisquam iste doloremque id.</p>
           </div>
         </div>
-        <div class="box-content" data-scroll data-scroll-speed="-2">
+        <div class="box-content" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
           <div class="content-title">
             <h2>
               Pendahuluan
@@ -166,11 +166,11 @@
       let scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
-        multiplier: 1.4, // Effect Multiplier
+        // lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
+        // multiplier: 1.4, // Effect Multiplier
         reloadOnContextChange: true,
-        touchMultiplier: 2,
-        smoothMobile: 0,
+        // touchMultiplier: 2,
+        smoothMobile: 1,
         smartphone: {
           smooth: !0,
           breakpoint: 767
