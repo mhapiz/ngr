@@ -108,7 +108,11 @@ main.invitation {
         background-blend-mode: soft-light;
         backdrop-filter: blur(2rem);
         /* Note: backdrop-filter has minimal browser support */
+        opacity: 1;
 
+        .box-view {
+          opacity: 1;
+        }
 
         .content-title {
           font-family: $displayFont;

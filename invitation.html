@@ -55,7 +55,8 @@
       <img src="assets/supergraphic/superghraphic_5.png" alt="graphic2" class="graphic graphic2">
       <img src="assets/supergraphic/superghraphic_2.png" alt="graphic3" class="graphic graphic3">
       <div class="content-wrapper container">
-        <div class="box-content " data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
+        <div class="box-content " data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal"
+          data-scroll-class="box-content-view">
           <div class="content-title">
             <h2>
               Kata Pengantar
@@ -69,7 +70,8 @@
               ipsum quisquam iste doloremque id.</p>
           </div>
         </div>
-        <div class="box-content" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
+        <div class="box-content" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal"
+          data-scroll-class="box-content-view">
           <div class="content-title">
             <h2>
               Pendahuluan
@@ -161,16 +163,17 @@
 
   <script src="assets/js/locomotive-scroll.min.js"></script>
 
-  <script>
+  <!-- <script>
     (function () {
       let scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
-        inertia: 0.8,
+        // inertia: 0.8,
         smooth: true,
+        smoothMobile: 1,
         getDirection: true,
         mobile: {
           breakpoint: 0,
-          smooth: false,
+          smooth: true,
           getDirection: true,
         },
         tablet: {
@@ -182,10 +185,10 @@
       });
 
     })();
-  </script>
+  </script> -->
 
   <!-- mendingan nih -->
-  <!-- <script>
+  <script>
     (function () {
       let scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
@@ -207,7 +210,7 @@
       });
 
     })();
-  </script> -->
+  </script>
 
 </body>
 
