@@ -278,4 +278,178 @@ main.invitation section.lokasi .alamat-wrapper .info-list .info-item .info-desc 
   font-size: 1.1rem;
   line-height: 1.5;
 }
+
+main.invitation section.rundown .timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+main.invitation section.rundown .timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+main.invitation section.rundown .container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+main.invitation section.rundown .container.left {
+  left: 0;
+}
+
+main.invitation section.rundown .container.right {
+  left: 50%;
+}
+
+main.invitation section.rundown .container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+main.invitation section.rundown .container.right::after {
+  left: -8px;
+}
+
+main.invitation section.rundown .container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006E51;
+  z-index: 1;
+}
+
+main.invitation section.rundown .container.right::before {
+  left: 8px;
+}
+
+main.invitation section.rundown .container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+main.invitation section.rundown .container.left .date {
+  right: -75px;
+}
+
+main.invitation section.rundown .container.right .date {
+  left: -75px;
+}
+
+main.invitation section.rundown .container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: #F6D155;
+  border: 2px solid #006E51;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #006E51;
+  z-index: 1;
+}
+
+main.invitation section.rundown .container.left .icon {
+  right: 56px;
+}
+
+main.invitation section.rundown .container.right .icon {
+  left: 56px;
+}
+
+main.invitation section.rundown .container .content {
+  padding: 30px 90px 30px 30px;
+  background: #F6D155;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+main.invitation section.rundown .container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+main.invitation section.rundown .container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+}
+
+main.invitation section.rundown .container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  main.invitation section.rundown .timeline::after {
+    left: 90px;
+  }
+  main.invitation section.rundown .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+  main.invitation section.rundown .container.right {
+    left: 0%;
+  }
+  main.invitation section.rundown .container.left::after,
+  main.invitation section.rundown .container.right::after {
+    left: 82px;
+  }
+  main.invitation section.rundown .container.left::before,
+  main.invitation section.rundown .container.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+  main.invitation section.rundown .container.left .date,
+  main.invitation section.rundown .container.right .date {
+    right: auto;
+    left: 15px;
+  }
+  main.invitation section.rundown .container.left .icon,
+  main.invitation section.rundown .container.right .icon {
+    right: auto;
+    left: 146px;
+  }
+  main.invitation section.rundown .container.left .content,
+  main.invitation section.rundown .container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+}
 /*# sourceMappingURL=invitation.css.map */
