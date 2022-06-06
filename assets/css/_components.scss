@@ -148,8 +148,6 @@ nav.my-navbar {
         }
       }
 
-
-
     }
 
     .nav-item.active {
@@ -386,77 +384,91 @@ nav.my-navbar.sticky {
 
 footer {
   background: $kayaGray;
-  padding: 1.5rem .5rem 1.5rem .5rem;
-  color: $kayaWhite;
 
-  @media only screen and (min-width: 768px) {
-    padding: 3rem 1rem 0 1rem;
-  }
+  .main-footer {
+    padding: 1.5rem .5rem 1.5rem .5rem;
+    color: $kayaWhite;
 
-  .brand img {
-    height: 2.5rem;
-  }
+    @media only screen and (min-width: 768px) {
+      padding: 3rem 1rem .5rem 1rem;
+    }
 
-  .address {
-    margin-top: 1rem;
+    .brand img {
+      height: 2.5rem;
+    }
 
-  }
+    .address {
+      margin-top: 1rem;
 
-  .footer-title {
-    font-family: $displayFont;
-    letter-spacing: .08rem;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
+    }
 
-  .footer-list {
-    padding: 0;
+    .footer-title {
+      font-family: $displayFont;
+      letter-spacing: .08rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
 
-    li {
-      list-style: none;
-      margin-bottom: .5rem;
+    .footer-list {
+      padding: 0;
+
+      li {
+        list-style: none;
+        margin-bottom: .5rem;
+
+        a {
+          color: $kayaWhite;
+          text-decoration: none;
+
+          &:hover {
+            color: $primaryColor;
+
+            &::after {
+              opacity: 1;
+            }
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            width: 1rem;
+            height: 1px;
+            background: $kayaWhite;
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    .sosmed-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      font-size: 1.125rem;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 1.5rem;
+        // width: 40%;
+
+      }
 
       a {
         color: $kayaWhite;
-        text-decoration: none;
-
-        &:hover {
-          color: $primaryColor;
-
-          &::after {
-            opacity: 1;
-          }
-        }
-
-        &::after {
-          content: '';
-          display: block;
-          width: 1rem;
-          height: 1px;
-          background: $kayaWhite;
-          opacity: 0;
-        }
       }
     }
   }
 
-  .sosmed-wrapper {
+  .copyright {
+    background: $gray;
     display: flex;
-    justify-content: space-between;
-    width: 50%;
-    font-size: 1.125rem;
+    justify-content: center;
+    padding: .5rem 0;
 
-    @media only screen and (min-width: 768px) {
-      font-size: 1.5rem;
-      // width: 40%;
-
-    }
-
-    a {
+    p {
+      font-size: .8rem;
       color: $kayaWhite;
     }
   }
-
 }
 
 
@@ -760,6 +772,71 @@ footer {
 
 
 // =====================================================
+// ONLY ON DESKTOP
+@media only screen and (min-width: 992px) {
+  .mouse {
+    width: 1.8rem;
+    height: 3rem;
+    border: 2px solid $kayaWhite;
+    border-radius: 4rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    translate: translateX(-50%);
+    z-index: 4;
+
+    &::before {
+      content: '';
+      width: .5rem;
+      height: .5rem;
+      position: absolute;
+      top: .2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $primaryColor;
+      border-radius: 50%;
+      opacity: 1;
+      animation: scroll 3s infinite;
+    }
+  }
+
+
+
+  @keyframes scroll {
+    from {
+      opacity: 1;
+      top: .2rem;
+    }
+
+    to {
+      opacity: 0;
+      top: 2rem;
+    }
+  }
+}
+
+@keyframes peak {
+  0% {
+    margin-top: 0;
+  }
+
+  25% {
+    margin-top: -5rem;
+  }
+
+  50% {
+    margin-top: -0;
+  }
+
+  75% {
+    margin-top: -5rem;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
 // =====================================================
 // =====================================================
 // =====================================================

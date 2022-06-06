@@ -24,10 +24,12 @@ function removeLoader() {
     let scroll_top = position.scroll.y;
     if (scroll_top > last_scroll_top) {
       $('nav').addClass('hide-navbar');
+      $('.mouse').addClass('d-none');
       $('nav').removeClass('show-navbar');
       $('.nav-links').removeClass('show-links');
     } else {
       $('nav').addClass('show-navbar');
+      $('.mouse').removeClass('d-none');
       $('nav').removeClass('hide-navbar');
       $('.nav-links').removeClass('show-links');
     }

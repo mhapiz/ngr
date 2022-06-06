@@ -24,7 +24,11 @@
 
   // deetail
 
+
   section.project-detail {
+    animation: peak 3s ease-in-out;
+    animation-delay: 5s;
+
     .subtitle {
       font-size: 1.25rem;
 
@@ -95,5 +99,19 @@
         }
       }
     }
+  }
+
+  // services
+  section.all-services {
+
+    .single-service {
+
+      .service-img {
+        width: 100%;
+        height: 12rem;
+
+      }
+    }
+
   }
 }
