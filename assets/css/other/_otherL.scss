@@ -114,4 +114,38 @@
     }
 
   }
+
+  // LOGIN 
+  section.login {
+
+    .img-wrapper {
+      width: 60%;
+      height: 100%;
+    }
+
+    .login-wrapper {
+      position: absolute;
+      top: 0;
+      left: 60%;
+      width: 40%;
+      height: 100%;
+      transform: translate(0, 0);
+      border-radius: 0;
+      padding: 20% 2rem;
+
+      .login-form {
+        padding: 0;
+
+        .login-title {
+          font-size: 2rem;
+          font-family: $displayFont;
+          color: $kayaBlack;
+          margin-bottom: 1rem;
+          letter-spacing: .08rem;
+        }
+
+      }
+    }
+  }
+
 }

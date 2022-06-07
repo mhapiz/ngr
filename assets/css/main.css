@@ -1752,6 +1752,137 @@ section.cta-section .cta-wrapper .blank-button {
   font-size: 1.25rem;
 }
 
+section.login {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+section.login .img-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+section.login .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+section.login .login-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(245, 245, 245, 0.8);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+}
+
+section.login .login-wrapper .login-form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+}
+
+section.login .login-wrapper .login-form .login-title {
+  font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
+  color: #1B1A17;
+  margin-bottom: 1rem;
+  letter-spacing: .08rem;
+}
+
+section.login .login-wrapper .login-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.login .login-wrapper .login-form form .form-group {
+  margin-top: 1rem;
+}
+
+section.login .login-wrapper .login-form form .main-button {
+  margin-top: 2rem;
+  padding: .5rem 0;
+  font-size: 1.25rem;
+}
+
+section.coming-soon {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+section.coming-soon .img-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+section.coming-soon .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+}
+
+section.coming-soon .coming-soon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F5F5F5;
+  padding: 1rem;
+}
+
+section.coming-soon .coming-soon-wrapper .coming-soon-title {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: .08rem;
+}
+
+section.coming-soon .coming-soon-wrapper .coming-soon-desc {
+  font-size: 1.125rem;
+}
+
 @media only screen and (min-width: 768px) {
   .img-divider {
     margin: 8rem 0;
@@ -1816,6 +1947,82 @@ section.cta-section .cta-wrapper .blank-button {
   section.all-services .single-service .service-img {
     width: 100%;
     height: 10em;
+  }
+  section.login .login-wrapper {
+    width: 60%;
+  }
+  section.login {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  section.login .img-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  section.login .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+    -webkit-filter: brightness(0.8);
+            filter: brightness(0.8);
+  }
+  section.login .login-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(245, 245, 245, 0.8);
+    -webkit-backdrop-filter: blur(0.5rem);
+            backdrop-filter: blur(0.5rem);
+  }
+  section.login .login-wrapper .login-form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+  }
+  section.login .login-wrapper .login-form .login-title {
+    font-size: 2rem;
+    font-family: "Bebas Neue", cursive;
+    color: #1B1A17;
+    margin-bottom: 1rem;
+    letter-spacing: .08rem;
+  }
+  section.login .login-wrapper .login-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.login .login-wrapper .login-form form .form-group {
+    margin-top: 1rem;
+  }
+  section.login .login-wrapper .login-form form .main-button {
+    margin-top: 2rem;
+    padding: .5rem 0;
+    font-size: 1.25rem;
+  }
+  section.coming-soon .coming-soon-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 4rem;
   }
 }
 
@@ -1896,6 +2103,31 @@ section.cta-section .cta-wrapper .blank-button {
     width: 100%;
     height: 12rem;
   }
+  section.login .img-wrapper {
+    width: 60%;
+    height: 100%;
+  }
+  section.login .login-wrapper {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    border-radius: 0;
+    padding: 20% 2rem;
+  }
+  section.login .login-wrapper .login-form {
+    padding: 0;
+  }
+  section.login .login-wrapper .login-form .login-title {
+    font-size: 2rem;
+    font-family: "Bebas Neue", cursive;
+    color: #1B1A17;
+    margin-bottom: 1rem;
+    letter-spacing: .08rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1960,6 +2192,37 @@ section.cta-section .cta-wrapper .blank-button {
   section.all-services .single-service .service-img {
     width: 100%;
     height: 14rem;
+  }
+  section.login .img-wrapper {
+    width: 75%;
+    height: 100%;
+  }
+  section.login .login-wrapper {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 25%;
+    height: 100%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    border-radius: 0;
+    padding: 16% 2rem;
+  }
+  section.login .login-wrapper .login-form {
+    padding: 0;
+  }
+  section.login .login-wrapper .login-form .login-title {
+    font-size: 2rem;
+    font-family: "Bebas Neue", cursive;
+    color: #1B1A17;
+    margin-bottom: 1rem;
+    letter-spacing: .08rem;
+  }
+  section.coming-soon .coming-soon-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 10rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
