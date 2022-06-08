@@ -24,13 +24,15 @@ function removeLoader() {
     let scroll_top = position.scroll.y;
     if (scroll_top > last_scroll_top) {
       $('nav').addClass('hide-navbar');
-      $('.mouse').addClass('d-none');
+      $('.mouse').fadeOut();
       $('nav').removeClass('show-navbar');
+      $('section.project-detail').removeClass('peak');
       $('.nav-links').removeClass('show-links');
     } else {
       $('nav').addClass('show-navbar');
-      $('.mouse').removeClass('d-none');
+      $('.mouse').fadeIn();
       $('nav').removeClass('hide-navbar');
+      $('section.project-detail').addClass('peak');
       $('.nav-links').removeClass('show-links');
     }
     last_scroll_top = scroll_top;

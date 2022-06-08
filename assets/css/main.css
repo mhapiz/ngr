@@ -924,6 +924,9 @@ footer .copyright p {
     left: 50%;
     translate: translateX(-50%);
     z-index: 4;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
   }
   .mouse::before {
     content: '';
@@ -939,6 +942,25 @@ footer .copyright p {
     opacity: 1;
     -webkit-animation: scroll 3s infinite;
             animation: scroll 3s infinite;
+  }
+  .mouse-hide {
+    opacity: 0;
+  }
+  @-webkit-keyframes fadeToNone {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes fadeToNone {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
   @-webkit-keyframes scroll {
     from {
@@ -996,6 +1018,13 @@ footer .copyright p {
   100% {
     margin-top: 0;
   }
+}
+
+.peak {
+  -webkit-animation: peak 3s ease-in-out;
+          animation: peak 3s ease-in-out;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 main header.home {
@@ -2024,6 +2053,9 @@ section.coming-soon .coming-soon-wrapper .coming-soon-desc {
             align-items: flex-start;
     padding: 4rem;
   }
+  section.coming-soon .coming-soon-wrapper .coming-soon-desc {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -2044,12 +2076,6 @@ section.coming-soon .coming-soon-wrapper .coming-soon-desc {
   }
   section.team .box-wrapper .single-box {
     height: 350px;
-  }
-  section.project-detail {
-    -webkit-animation: peak 3s ease-in-out;
-            animation: peak 3s ease-in-out;
-    -webkit-animation-delay: 5s;
-            animation-delay: 5s;
   }
   section.project-detail .subtitle {
     font-size: 1.25rem;

@@ -784,6 +784,8 @@ footer {
     left: 50%;
     translate: translateX(-50%);
     z-index: 4;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
 
     &::before {
       content: '';
@@ -798,9 +800,26 @@ footer {
       opacity: 1;
       animation: scroll 3s infinite;
     }
+
+
+  }
+
+  .mouse-hide {
+    opacity: 0;
   }
 
 
+
+  @keyframes fadeToNone {
+    from {
+      opacity: 1;
+
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
 
   @keyframes scroll {
     from {
@@ -835,6 +854,11 @@ footer {
   100% {
     margin-top: 0;
   }
+}
+
+.peak {
+  animation: peak 3s ease-in-out;
+  animation-delay: 5s;
 }
 
 // =====================================================
