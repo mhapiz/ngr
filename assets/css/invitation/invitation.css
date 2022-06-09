@@ -1,4 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@400;500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
   overflow: hidden;
@@ -95,15 +104,6 @@ html.has-scroll-dragging {
   bottom: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif !important;
-  overflow-x: hidden;
-}
-
 @media only screen and (min-width: 768px) {
   body {
     padding: 0 calc(100vw * 0.24);
@@ -122,10 +122,6 @@ body {
   }
 }
 
-main.invitation section {
-  overflow: hidden;
-}
-
 main.invitation section.cover {
   width: 100%;
   height: 100vh;
@@ -133,6 +129,18 @@ main.invitation section.cover {
   background-position: center center;
   background-repeat: no-repeat;
   padding: 2rem 1rem;
+  position: relative;
+}
+
+main.invitation section.cover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 main.invitation section.cover .content-wrapper {
@@ -167,19 +175,24 @@ main.invitation section.cover .content-wrapper .logo-wrapper img {
 main.invitation section.cover .content-wrapper .title {
   margin-top: 2rem;
   text-align: center;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Courgette", cursive;
   color: #F5F5F5;
+  letter-spacing: .08rem;
 }
 
-main.invitation section.cover .content-wrapper .title h1 {
-  font-size: 3rem;
-  letter-spacing: .08rem;
+main.invitation section.cover .content-wrapper .title .opening-title {
+  font-size: 1rem;
+}
+
+main.invitation section.cover .content-wrapper .title .main-title {
+  margin-top: 2rem;
 }
 
 main.invitation section.kata-kata {
   width: 100%;
   height: 100vh;
   position: relative;
+  font-size: 12px;
 }
 
 main.invitation section.kata-kata .graphic {
@@ -188,19 +201,19 @@ main.invitation section.kata-kata .graphic {
 
 main.invitation section.kata-kata .graphic1 {
   top: 8%;
-  height: 20rem;
+  height: 10rem;
 }
 
 main.invitation section.kata-kata .graphic2 {
-  top: 25rem;
+  top: 20rem;
   right: -10%;
-  width: 20rem;
+  width: 15rem;
 }
 
 main.invitation section.kata-kata .graphic3 {
   bottom: 0;
   right: 0;
-  width: 12rem;
+  width: 8rem;
 }
 
 main.invitation section.kata-kata .content-wrapper {
@@ -212,23 +225,18 @@ main.invitation section.kata-kata .content-wrapper {
 }
 
 main.invitation section.kata-kata .content-wrapper .box-content {
-  margin-top: 4rem;
-  border-radius: 16px;
+  margin-top: 2rem;
+  border-radius: .5rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.6);
   background-blend-mode: soft-light;
   -webkit-backdrop-filter: blur(2rem);
           backdrop-filter: blur(2rem);
   /* Note: backdrop-filter has minimal browser support */
-  opacity: 1;
-}
-
-main.invitation section.kata-kata .content-wrapper .box-content .box-view {
-  opacity: 1;
 }
 
 main.invitation section.kata-kata .content-wrapper .box-content .content-title {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Courgette", cursive;
 }
 
 main.invitation section.kata-kata .content-wrapper .box-content .content-desc {
@@ -242,7 +250,7 @@ main.invitation section.lokasi {
 
 main.invitation section.lokasi .maps {
   width: 100%;
-  height: 50vh;
+  height: 25vh;
   background: #1B1A17;
 }
 
@@ -253,29 +261,34 @@ main.invitation section.lokasi .maps iframe {
 
 main.invitation section.lokasi .alamat-wrapper {
   width: 100%;
-  height: 50vh;
+  height: 75vh;
   padding: 1rem .8rem;
   background-color: #404244;
   color: #F5F5F5;
 }
 
-main.invitation section.lokasi .alamat-wrapper h2.title {
-  font-family: "Bebas Neue", cursive;
+main.invitation section.lokasi .alamat-wrapper h5.title {
+  font-family: "Courgette", cursive;
   letter-spacing: .08rem;
+}
+
+main.invitation section.lokasi .alamat-wrapper .info-list {
+  margin-top: 2rem;
+  font-size: 12px;
 }
 
 main.invitation section.lokasi .alamat-wrapper .info-list .info-item {
   margin-bottom: 1rem;
+  border-bottom: 1px solid #F5F5F5;
 }
 
-main.invitation section.lokasi .alamat-wrapper .info-list .info-item .info-title h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+main.invitation section.lokasi .alamat-wrapper .info-list .info-item .info-title h6 {
+  font-weight: 500;
 }
 
 main.invitation section.lokasi .alamat-wrapper .info-list .info-item .info-desc {
   margin-top: .5rem;
-  font-size: 1.1rem;
+  font-size: 14px;
   line-height: 1.5;
 }
 

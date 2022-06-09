@@ -1,5 +1,7 @@
 @import 'assets';
+@import '../locomotivescroll';
 
+//---------- 
 @media only screen and (min-width: 768px) {
   body {
     padding: 0 calc(100vw * 0.24);
@@ -19,9 +21,9 @@
 }
 
 main.invitation {
-  section {
-    overflow: hidden;
-  }
+  // section {
+  //   overflow: hidden;
+  // }
 
   section.cover {
     width: 100%;
@@ -30,12 +32,22 @@ main.invitation {
     background-position: center center;
     background-repeat: no-repeat;
     padding: 2rem 1rem;
+    position: relative;
 
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
 
     .content-wrapper {
       height: 100%;
       padding: 1rem .5rem;
-      // background: rgba($color: green, $alpha: .4);
       border: 4px solid $kayaWhite;
       display: flex;
       flex-direction: column;
@@ -58,9 +70,15 @@ main.invitation {
         font-family: $displayFont;
         color: $kayaWhite;
 
-        h1 {
-          font-size: 3rem;
-          letter-spacing: .08rem;
+        letter-spacing: .08rem;
+
+        .opening-title {
+          font-size: 1rem;
+        }
+
+        .main-title {
+          margin-top: 2rem;
+          // font-size: 2.25rem;
         }
       }
     }
@@ -70,6 +88,7 @@ main.invitation {
     width: 100%;
     height: 100vh;
     position: relative;
+    font-size: 12px;
 
     .graphic {
       position: absolute;
@@ -77,19 +96,19 @@ main.invitation {
 
     .graphic1 {
       top: 8%;
-      height: 20rem;
+      height: 10rem;
     }
 
     .graphic2 {
-      top: 25rem;
+      top: 20rem;
       right: -10%;
-      width: 20rem;
+      width: 15rem;
     }
 
     .graphic3 {
       bottom: 0;
       right: 0;
-      width: 12rem;
+      width: 8rem;
     }
 
     .content-wrapper {
@@ -99,20 +118,14 @@ main.invitation {
       width: 100%;
       height: 100%;
 
-
       .box-content {
-        margin-top: 4rem;
-        border-radius: 16px;
+        margin-top: 2rem;
+        border-radius: .5rem;
         padding: 1rem;
         background: rgba(255, 255, 255, 0.6);
         background-blend-mode: soft-light;
         backdrop-filter: blur(2rem);
         /* Note: backdrop-filter has minimal browser support */
-        opacity: 1;
-
-        .box-view {
-          opacity: 1;
-        }
 
         .content-title {
           font-family: $displayFont;
@@ -131,7 +144,7 @@ main.invitation {
 
     .maps {
       width: 100%;
-      height: 50vh;
+      height: 25vh;
       background: $kayaBlack;
 
       iframe {
@@ -142,32 +155,34 @@ main.invitation {
 
     .alamat-wrapper {
       width: 100%;
-      height: 50vh;
+      height: 75vh;
       padding: 1rem .8rem;
       background-color: $kayaGray;
-
       color: $kayaWhite;
 
-      h2.title {
+      h5.title {
         font-family: $displayFont;
         letter-spacing: .08rem;
-
       }
 
       .info-list {
+        margin-top: 2rem;
+        font-size: 12px;
+
         .info-item {
           margin-bottom: 1rem;
+          border-bottom: 1px solid $kayaWhite;
 
           .info-title {
-            h3 {
-              font-size: 1.25rem;
-              font-weight: 600;
+            h6 {
+              // font-size: 1.25rem;
+              font-weight: 500;
             }
           }
 
           .info-desc {
             margin-top: .5rem;
-            font-size: 1.1rem;
+            font-size: 14px;
             line-height: 1.5;
           }
         }
