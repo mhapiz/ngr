@@ -14,6 +14,9 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="stylesheet" href="assets/library/owlcarousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/library/owlcarousel/css/owl.theme.default.min.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <link rel="stylesheet" href="assets/css/invitation/invitation.css">
@@ -203,6 +206,58 @@
       </div>
     </section>
 
+    <section class="film-carousel" data-scroll-section>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="content">
+            <img src="assets/img/avenger.jpg" alt="img1" class="bg-content">
+            <div class="overlay"></div>
+            <div class="content-inner ">
+              <h3 class="title animate__animated  animate__fadeIn delay-animation-title">Avengers: Infinity War</h3>
+              <h5 class="sub-title animate__animated  animate__fadeIn delay-animation-sub-title">Movie - 2019</h5>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <img src="assets/img/queens.jpg" alt="img2" class="bg-content">
+            <div class="overlay"></div>
+            <div class="content-inner">
+              <h3 class="title">The Queen's Gambit</h3>
+              <h5 class="sub-title">Series - 2020</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="content">
+            <img src="assets/img/logan.jpg" alt="img2" class="bg-content">
+            <div class="overlay"></div>
+            <div class="content-inner">
+              <h3 class="title">Logan</h3>
+              <h5 class="sub-title">Marvel Studio - 2017</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="content">
+            <img src="assets/img/twd.jpg" alt="img2" class="bg-content">
+            <div class="overlay"></div>
+            <div class="content-inner">
+              <h3 class="title">The Walking Dead</h3>
+              <h5 class="sub-title">AMC - 2010</h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -210,7 +265,7 @@
 
   <script src="assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- <script src="assets/library/owlcarousel/js/owl.carousel.min.js"></script> -->
+  <script src="assets/library/owlcarousel/js/owl.carousel.min.js"></script>
 
   <script src="assets/js/locomotive-scroll.min.js"></script>
 
@@ -240,27 +295,55 @@
 
   <!-- mendingan nih -->
   <script>
-    (function () {
-      let scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        // lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
-        multiplier: 1.4, // Effect Multiplier
-        reloadOnContextChange: true,
-        // touchMultiplier: 2,
-        smoothMobile: 1,
-        smartphone: {
-          smooth: !0,
-          breakpoint: 767
-        },
-        tablet: {
-          smooth: !1,
-          breakpoint: 1024
-        },
+    $(document).ready(function () {
+      (function () {
+        let scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true,
+          // lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
+          multiplier: 1.4, // Effect Multiplier
+          reloadOnContextChange: true,
+          // touchMultiplier: 2,
+          smoothMobile: 1,
+          smartphone: {
+            smooth: !0,
+            // breakpoint: 767
+          },
+          tablet: {
+            smooth: !1,
+            // breakpoint: 1024
+          },
 
+        });
+        setTimeout(() => {
+          scroll.update();
+        }, 5000);
+      })();
+
+      var owl = $('.owl-carousel').owlCarousel({
+        loop: true,
+        // margin: 10,
+        lazyLoad: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayHoverPause: true,
+        autoplaySpeed: 1000,
+        nav: false,
+        dots: false,
+        dotsData: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
       });
-
-    })();
+    });
   </script>
 
 </body>

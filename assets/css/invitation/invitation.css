@@ -301,8 +301,8 @@ main.invitation section.lokasi .alamat-wrapper .info-list .info-item .info-desc 
 }
 
 main.invitation section.rundown {
-  height: 100vh;
   width: 100vw;
+  height: 120vh;
 }
 
 main.invitation section.rundown .timeline {
@@ -358,6 +358,10 @@ main.invitation section.rundown .timeline .timeline-content-wrapper .timeline-co
   border-radius: .5rem;
 }
 
+main.invitation section.rundown .timeline .timeline-content-wrapper .timeline-content p {
+  font-size: 14px;
+}
+
 main.invitation section.rundown .timeline .timeline-content-wrapper .timeline-content::after {
   content: " ";
   height: 0;
@@ -369,5 +373,84 @@ main.invitation section.rundown .timeline .timeline-content-wrapper .timeline-co
   border: medium solid #404244;
   border-width: 1rem 1rem 1rem 0;
   border-color: transparent #404244 transparent transparent;
+}
+
+main.invitation section.film-carousel .owl-carousel {
+  height: 100vh;
+  width: 100%;
+}
+
+main.invitation section.film-carousel .owl-carousel .item {
+  height: 100vh;
+  width: 100%;
+}
+
+main.invitation section.film-carousel .owl-carousel .item .content {
+  height: 100%;
+  width: 100%;
+}
+
+main.invitation section.film-carousel .owl-carousel .item .content img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+main.invitation section.film-carousel .owl-carousel .item .content .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+main.invitation section.film-carousel .owl-carousel .item .content .content-inner {
+  position: relative;
+  z-index: 3;
+  color: #F5F5F5;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem 1rem;
+}
+
+main.invitation section.film-carousel .owl-carousel .item .content .content-inner .title,
+main.invitation section.film-carousel .owl-carousel .item .content .content-inner .sub-title {
+  font-family: "Courgette", cursive;
+  font-style: normal;
+  font-weight: 400;
+}
+
+main.invitation section.film-carousel .owl-carousel .item .content .content-inner .title {
+  font-size: 2rem;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+}
+
+main.invitation section.film-carousel .owl-carousel .item .content .content-inner .sub-title {
+  margin-top: .5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
 }
 /*# sourceMappingURL=invitation.css.map */
