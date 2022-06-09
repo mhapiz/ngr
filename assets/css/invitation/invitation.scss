@@ -313,6 +313,7 @@ main.invitation {
               font-family: $displayFont;
               font-style: normal;
               font-weight: 400;
+              text-align: center;
             }
 
             .title {
@@ -330,6 +331,55 @@ main.invitation {
 
           }
         }
+      }
+    }
+  }
+
+  section.donation {
+    width: 100vw;
+    height: 100vh;
+
+    .donate-here {
+      width: 100%;
+      height: 60vh;
+      background: #EB343C;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .qr-wrapper {
+        height: 40vh;
+        width: 40vh;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .donate-please {
+      width: 100%;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+
+      .title {
+        font-family: $displayFont;
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.04em;
+      }
+
+      .desc {
+        font-size: 1.25rem;
       }
     }
   }

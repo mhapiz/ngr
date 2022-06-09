@@ -440,6 +440,7 @@ main.invitation section.film-carousel .owl-carousel .item .content .content-inne
   font-family: "Courgette", cursive;
   font-style: normal;
   font-weight: 400;
+  text-align: center;
 }
 
 main.invitation section.film-carousel .owl-carousel .item .content .content-inner .title {
@@ -452,5 +453,72 @@ main.invitation section.film-carousel .owl-carousel .item .content .content-inne
   margin-top: .5rem;
   font-size: 1.5rem;
   letter-spacing: 0.08em;
+}
+
+main.invitation section.donation {
+  width: 100vw;
+  height: 100vh;
+}
+
+main.invitation section.donation .donate-here {
+  width: 100%;
+  height: 60vh;
+  background: #EB343C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.invitation section.donation .donate-here .qr-wrapper {
+  height: 40vh;
+  width: 40vh;
+}
+
+main.invitation section.donation .donate-here .qr-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+main.invitation section.donation .donate-please {
+  width: 100%;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+main.invitation section.donation .donate-please .title {
+  font-family: "Courgette", cursive;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+main.invitation section.donation .donate-please .desc {
+  font-size: 1.25rem;
 }
 /*# sourceMappingURL=invitation.css.map */
