@@ -190,7 +190,7 @@ main.invitation section.cover .content-wrapper .title .main-title {
 
 main.invitation section.kata-kata {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   position: relative;
   font-size: 12px;
 }
@@ -222,13 +222,21 @@ main.invitation section.kata-kata .content-wrapper {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 main.invitation section.kata-kata .content-wrapper .box-content {
-  margin-top: 2rem;
   border-radius: .5rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   background-blend-mode: soft-light;
   -webkit-backdrop-filter: blur(2rem);
           backdrop-filter: blur(2rem);
@@ -240,7 +248,7 @@ main.invitation section.kata-kata .content-wrapper .box-content .content-title {
 }
 
 main.invitation section.kata-kata .content-wrapper .box-content .content-desc {
-  line-height: 120%;
+  line-height: 150%;
 }
 
 main.invitation section.lokasi {
@@ -250,7 +258,7 @@ main.invitation section.lokasi {
 
 main.invitation section.lokasi .maps {
   width: 100%;
-  height: 25vh;
+  height: 30vh;
   background: #1B1A17;
 }
 
@@ -261,7 +269,7 @@ main.invitation section.lokasi .maps iframe {
 
 main.invitation section.lokasi .alamat-wrapper {
   width: 100%;
-  height: 75vh;
+  height: 70vh;
   padding: 1rem .8rem;
   background-color: #404244;
   color: #F5F5F5;
@@ -292,177 +300,74 @@ main.invitation section.lokasi .alamat-wrapper .info-list .info-item .info-desc 
   line-height: 1.5;
 }
 
+main.invitation section.rundown {
+  height: 100vh;
+  width: 100vw;
+}
+
 main.invitation section.rundown .timeline {
-  position: relative;
   width: 100%;
-  margin: 0 auto;
-  padding: 15px 0;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 main.invitation section.rundown .timeline::after {
   content: '';
   position: absolute;
-  width: 2px;
-  background: #006E51;
+  width: 6px;
+  background-color: #F2CF40;
   top: 0;
   bottom: 0;
-  left: 50%;
-  margin-left: -1px;
+  left: 1rem;
+  margin-left: -3px;
 }
 
-main.invitation section.rundown .container {
-  padding: 15px 30px;
+main.invitation section.rundown .timeline .timeline-content-wrapper {
+  padding-left: 3rem;
+  padding-right: 1.5rem;
   position: relative;
-  background: inherit;
-  width: 50%;
 }
 
-main.invitation section.rundown .container.left {
-  left: 0;
-}
-
-main.invitation section.rundown .container.right {
-  left: 50%;
-}
-
-main.invitation section.rundown .container::after {
+main.invitation section.rundown .timeline .timeline-content-wrapper::after {
   content: '';
   position: absolute;
-  width: 16px;
-  height: 16px;
-  top: calc(50% - 8px);
-  right: -8px;
-  background: #ffffff;
-  border: 2px solid #006E51;
-  border-radius: 16px;
+  width: 25px;
+  height: 25px;
+  background-color: #F5F5F5;
+  border: 4px solid #F2CF40;
+  top: .5rem;
+  left: .2rem;
+  border-radius: 50%;
   z-index: 1;
 }
 
-main.invitation section.rundown .container.right::after {
-  left: -8px;
-}
-
-main.invitation section.rundown .container::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  top: calc(50% - 1px);
-  right: 8px;
-  background: #006E51;
-  z-index: 1;
-}
-
-main.invitation section.rundown .container.right::before {
-  left: 8px;
-}
-
-main.invitation section.rundown .container .date {
-  position: absolute;
-  display: inline-block;
-  top: calc(50% - 8px);
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #006E51;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  z-index: 1;
-}
-
-main.invitation section.rundown .container.left .date {
-  right: -75px;
-}
-
-main.invitation section.rundown .container.right .date {
-  left: -75px;
-}
-
-main.invitation section.rundown .container .icon {
-  position: absolute;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 9px 0;
-  top: calc(50% - 20px);
-  background: #F6D155;
-  border: 2px solid #006E51;
-  border-radius: 40px;
-  text-align: center;
-  font-size: 18px;
-  color: #006E51;
-  z-index: 1;
-}
-
-main.invitation section.rundown .container.left .icon {
-  right: 56px;
-}
-
-main.invitation section.rundown .container.right .icon {
-  left: 56px;
-}
-
-main.invitation section.rundown .container .content {
-  padding: 30px 90px 30px 30px;
-  background: #F6D155;
+main.invitation section.rundown .timeline .timeline-content-wrapper .timeline-content {
+  padding: .8rem 1rem;
   position: relative;
-  border-radius: 0 500px 500px 0;
+  background-color: #404244;
+  color: #F5F5F5;
+  border-radius: .5rem;
 }
 
-main.invitation section.rundown .container.right .content {
-  padding: 30px 30px 30px 90px;
-  border-radius: 500px 0 0 500px;
-}
-
-main.invitation section.rundown .container .content h2 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  font-weight: normal;
-  color: #006E51;
-}
-
-main.invitation section.rundown .container .content p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 22px;
-  color: #000000;
-}
-
-@media (max-width: 767.98px) {
-  main.invitation section.rundown .timeline::after {
-    left: 90px;
-  }
-  main.invitation section.rundown .container {
-    width: 100%;
-    padding-left: 120px;
-    padding-right: 30px;
-  }
-  main.invitation section.rundown .container.right {
-    left: 0%;
-  }
-  main.invitation section.rundown .container.left::after,
-  main.invitation section.rundown .container.right::after {
-    left: 82px;
-  }
-  main.invitation section.rundown .container.left::before,
-  main.invitation section.rundown .container.right::before {
-    left: 100px;
-    border-color: transparent #006E51 transparent transparent;
-  }
-  main.invitation section.rundown .container.left .date,
-  main.invitation section.rundown .container.right .date {
-    right: auto;
-    left: 15px;
-  }
-  main.invitation section.rundown .container.left .icon,
-  main.invitation section.rundown .container.right .icon {
-    right: auto;
-    left: 146px;
-  }
-  main.invitation section.rundown .container.left .content,
-  main.invitation section.rundown .container.right .content {
-    padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
-  }
+main.invitation section.rundown .timeline .timeline-content-wrapper .timeline-content::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: .2rem;
+  left: -.9rem;
+  width: 0;
+  z-index: 1;
+  border: medium solid #404244;
+  border-width: 1rem 1rem 1rem 0;
+  border-color: transparent #404244 transparent transparent;
 }
 /*# sourceMappingURL=invitation.css.map */
