@@ -343,14 +343,16 @@ main.invitation {
       width: 100%;
       height: 60vh;
       background: #EB343C;
+      border-bottom-left-radius: 6rem;
+      border-bottom-right-radius: 6rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
       .qr-wrapper {
-        height: 40vh;
-        width: 40vh;
+        height: 20vh;
+        width: 20vh;
 
         img {
           width: 100%;
@@ -368,6 +370,53 @@ main.invitation {
       align-items: center;
       padding: 2rem;
       text-align: center;
+
+      .title {
+        font-family: $displayFont;
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.04em;
+      }
+
+      .desc {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  section.last-word {
+    width: 100%;
+    height: 100vh;
+    background: $kayaBlack;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    color: $kayaWhite;
+
+    .graphic {
+      position: absolute;
+    }
+
+    .graphic1 {
+      top: 8%;
+      left: -10%;
+      height: 10rem;
+    }
+
+    .graphic2 {
+      bottom: 4rem;
+      right: -10%;
+      width: 15rem;
+    }
+
+    .last-word-wrapper {
+      position: relative;
+
 
       .title {
         font-family: $displayFont;

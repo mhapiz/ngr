@@ -464,6 +464,8 @@ main.invitation section.donation .donate-here {
   width: 100%;
   height: 60vh;
   background: #EB343C;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,8 +482,8 @@ main.invitation section.donation .donate-here {
 }
 
 main.invitation section.donation .donate-here .qr-wrapper {
-  height: 40vh;
-  width: 40vh;
+  height: 20vh;
+  width: 20vh;
 }
 
 main.invitation section.donation .donate-here .qr-wrapper img {
@@ -519,6 +521,61 @@ main.invitation section.donation .donate-please .title {
 }
 
 main.invitation section.donation .donate-please .desc {
+  font-size: 1.25rem;
+}
+
+main.invitation section.last-word {
+  width: 100%;
+  height: 100vh;
+  background: #1B1A17;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: #F5F5F5;
+}
+
+main.invitation section.last-word .graphic {
+  position: absolute;
+}
+
+main.invitation section.last-word .graphic1 {
+  top: 8%;
+  left: -10%;
+  height: 10rem;
+}
+
+main.invitation section.last-word .graphic2 {
+  bottom: 4rem;
+  right: -10%;
+  width: 15rem;
+}
+
+main.invitation section.last-word .last-word-wrapper {
+  position: relative;
+}
+
+main.invitation section.last-word .last-word-wrapper .title {
+  font-family: "Courgette", cursive;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+main.invitation section.last-word .last-word-wrapper .desc {
   font-size: 1.25rem;
 }
 /*# sourceMappingURL=invitation.css.map */
